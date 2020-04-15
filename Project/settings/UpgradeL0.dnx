@@ -26,7 +26,7 @@
         <MultiCoreRunAll>1</MultiCoreRunAll>
     </Simulator>
     <DebugChecksum>
-        <Checksum>3878252436</Checksum>
+        <Checksum>3745837511</Checksum>
     </DebugChecksum>
     <JLinkDriver>
         <TraceBufferSize>0x00010000</TraceBufferSize>
@@ -49,8 +49,8 @@
         <ShowArgs>0</ShowArgs>
     </CallStack>
     <Disassembly>
-        <MixedMode>1</MixedMode>
         <InstrCount>0</InstrCount>
+        <MixedMode>1</MixedMode>
     </Disassembly>
     <SWOTraceHWSettings>
         <OverrideDefaultClocks>0</OverrideDefaultClocks>
@@ -144,8 +144,9 @@
         <LeaveTargetRunning>_ 0</LeaveTargetRunning>
     </StLinkDriver>
     <watch_formats>
-        <Fmt0>{W}1:sec_10	3	0</Fmt0>
-        <Fmt1>{W}1:tmpsmcr	4	0</Fmt1>
+        <Fmt0>{W}1:Current_pulse	3	0</Fmt0>
+        <Fmt1>{W}1:sec_10	3	0</Fmt1>
+        <Fmt2>{W}1:tmpsmcr	4	0</Fmt2>
     </watch_formats>
     <Trace1>
         <Enabled>0</Enabled>
@@ -177,17 +178,17 @@
         <mode>0</mode>
     </DisassembleMode>
     <Breakpoints2>
-        <Bp0>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Source\BSP\tim.c}.0.1" 0 0 1 "" 0 "" 0</Bp0>
-        <Bp1>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Source\BSP\tim.c}.0.1" 0 0 1 "" 0 "" 0</Bp1>
-        <Bp2>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Source\BSP\tim.c}.0.1" 0 0 1 "" 0 "" 0</Bp2>
-        <Bp3>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Source\BSP\tim1.c}.326.1" 0 0 1 "" 0 "" 0</Bp3>
-        <Bp4>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Source\BSP\tim1.c}.326.1" 0 0 1 "" 0 "" 0</Bp4>
-        <Bp5>_ 1 "EMUL_CODE" "{$PROJ_DIR$\..\Source\BSP\tim1.c}.295.5" 0 0 1 "" 0 "" 0</Bp5>
-        <Bp6>_ 1 "EMUL_CODE" "{$PROJ_DIR$\..\Source\BSP\tim1.c}.324.5" 0 0 1 "" 0 "" 0</Bp6>
-        <Count>7</Count>
+        <Bp0>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Source\BSP\tim.c}.221.1" 0 0 1 "" 0 "" 0</Bp0>
+        <Bp1>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Source\BSP\tim.c}.221.1" 0 0 1 "" 0 "" 0</Bp1>
+        <Bp2>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Source\BSP\tim.c}.221.1" 0 0 1 "" 0 "" 0</Bp2>
+        <Bp3>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Source\BSP\tim.c}.221.1" 0 0 1 "" 0 "" 0</Bp3>
+        <Bp4>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Source\APP\para.c}.195.1" 0 0 1 "" 0 "" 0</Bp4>
+        <Bp5>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Source\BSP\tim.c}.214.15" 0 0 1 "" 0 "" 0</Bp5>
+        <Count>6</Count>
     </Breakpoints2>
     <Aliases>
-        <Count>0</Count>
+        <A0>_ "F:\信为产品\正反转\DirectionSensor_rotation_1.2_正反转_L031(F3)  调试第三版 修改累计运行时间 20200410  V1.0.3\DirectionSensor_rotation_1.2_正反转_L031(F3)\Source\FWLib\src\stm32l0xx_hal_flash_ex.c" "F:\信为产品\05 - 正反转\DirectionSensor_rotation_1.2_正反转_L031(F3)  调试第4版 修改累计运行时间 20200410  V1.0.3\DirectionSensor_rotation_1.2_正反转_L031(F3)\Source\FWLib\src\stm32l0xx_hal_flash_ex.c"</A0>
+        <Count>1</Count>
         <SuppressDialog>0</SuppressDialog>
     </Aliases>
 </settings>

@@ -19,8 +19,10 @@ extern BitAction StartFillBufFlag;
 
 extern uint8_t Cur_Param[USER_DEFAULT_LEN];
 extern uint8_t const  User_Default_Param[USER_DEFAULT_LEN];
+extern uint16_t Current_PositiveTime ;  //当前正转脉冲数
+extern uint16_t Current_NegativeTime ;  //当前反转脉冲数
 
-u8 const SensorSoftVersion[8] = {0x07, 'S', 'V', '1', '.', '0', '.', '3'};      //软件版本  20200409
+u8 const SensorSoftVersion[8] = {0x07, 'S', 'V', '1', '.', '0', '.', '4'};      //软件版本  20200413
 //**************************************************************************************************
 // 名称         	: MBASCII_GetSlaveAddr()
 // 创建日期   	        : 2015-10-29
@@ -345,19 +347,8 @@ void MBASC_Fun04(void)	                                                        /
             break;            
 
           case 0x0A: 
-//              if(UserPara.DirSta==1)// 正转
-//              {
-//                    Data_Buf = UserPara.NegativeTimeBase + (UserPara.Duration+30)/60;//  旋转方向持续时间    
-//              }
-//              else if(UserPara.RotateSta==2)// 反转
-//              { 
-//                    Data_Buf = UserPara.PositiveTimeBase + (UserPara.Duration+30)/60;//  旋转方向持续时间   
-//              }
-//              else
-//              {
-//                    Data_Buf = UserPara.Duration;//  停转   
-//              }
-            Data_Buf = (UserPara.Duration+30)/60;
+              
+              Data_Buf = UserPara.Duration;
                                  
             break; 
 

@@ -8,6 +8,9 @@ extern uint16_t LiquidUnit;
 extern uint8_t  LiquidRange;
 extern uint8_t time_tick;
 
+uint16_t Current_pulse = 0;  //当前脉冲数
+uint16_t Current_PositiveTime = 0;  //当前正转脉冲数
+uint16_t Current_NegativeTime = 0;  //当前反转脉冲数
 
 //数据的高字节在前，低字节在后（大端模式）
 uint8_t  User_Default_Param[USER_DEFAULT_LEN] =
@@ -172,18 +175,21 @@ void ReadPara(void)
         uTemp[i] = Cur_Param[NEGATIVE_ROTATE_TIME_BASE + i];
         UserPara.NegativeTimeBase += ((uint32_t)uTemp[i] << (3 - i) * 8); 
     }
+    Current_NegativeTime = UserPara.NegativeTimeBase;
     
      for(i = 0; i < 4 ;i ++)
     {
         uTemp[i] = Cur_Param[POSITIVE_ROTATE_TIME_BASE + i];
         UserPara.PositiveTimeBase += ((uint32_t)uTemp[i] << (3 - i) * 8); 
     }
+    Current_PositiveTime =  UserPara.PositiveTimeBase;
     
      for(i = 0; i < 4 ;i ++)
     {
         uTemp[i] = Cur_Param[PULSE_TOTAL_BASE + i];
         UserPara.TotalPulse += ((uint32_t)uTemp[i] << (3 - i) * 8); 
     }
+    Current_pulse  = UserPara.TotalPulse;
     
 
 }
