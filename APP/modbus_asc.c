@@ -20,7 +20,7 @@ extern BitAction StartFillBufFlag;
 extern uint8_t Cur_Param[USER_DEFAULT_LEN];
 extern uint8_t const  User_Default_Param[USER_DEFAULT_LEN];
 
-u8 const SensorSoftVersion[8] = {0x07, 'S', 'V', '1', '.', '0', '.', '2'};      //软件版本  20200409
+u8 const SensorSoftVersion[8] = {0x07, 'S', 'V', '1', '.', '0', '.', '3'};      //软件版本  20200409
 //**************************************************************************************************
 // 名称         	: MBASCII_GetSlaveAddr()
 // 创建日期   	        : 2015-10-29
@@ -646,8 +646,8 @@ void MBASC_Fun10()
 void MBASC_Fun2B(void)
 {
     u16 Object_Num = 0, ReadAdr = 0;
-    u8 CompanyNameLen = 0, ProductionCodeLen = 0, HardwareVersionLen = 0;
-    u8 SoftwareVersionLen = 0, DeviceIdLen = 0, CustomerCodeLen = 0;
+    u8 CompanyNameLen = 0;//ProductionCodeLen = 0, HardwareVersionLen = 0;
+    u8 SoftwareVersionLen = 0;//DeviceIdLen = 0, CustomerCodeLen = 0;
     
     if(UserPara.SlaveAddr != UART1_RXBuff[2])                                   //当从机地址改为非0x45时，也可以读写寄存器
     {

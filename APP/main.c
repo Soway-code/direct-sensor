@@ -34,9 +34,6 @@ extern uint8_t StartCountFlag;
 extern BitAction  PulseFlag;
 IWDG_HandleTypeDef  IWDG_HandleStructure;
 
-typedef uint32_t  u32;
-typedef uint16_t u16;
-typedef uint8_t  u8;
 
 extern UserTypeDef UserPara;
  
@@ -136,7 +133,7 @@ void User_Iwdg_Feed(void)
 //******************************************************************************
 void main(void)
 { 
-    uint8_t i;   
+    //uint8_t i;   
     uint8_t Z_F_Zhuan;     
     uint8_t uTemp[4];
     
@@ -152,10 +149,13 @@ void main(void)
     Uart_Config_Init();                                                         //串口配置
     //TIM2_Init();                                //PA0读数 脉冲读数
     
-    TIM21_ETR_Init(); //PA0读数 脉冲读数
-    TIM22_Init();                                //100ms定时器
-    
-    //User_Iwdg_Init();                                                           //看门狗配置
+//    TIM21_ETR_Init(); //PA1读数 脉冲读数
+//    TIM22_Init();               //100ms定时器
+     //TIM22_CH2_Init();   //  PA10 脉冲计数器配置
+     TIM2_Init();           //     TIM2定时100ms
+     MX_TIM22_Init();
+   
+     //User_Iwdg_Init();                                                           //看门狗配置
     
     while(1)
     {         
@@ -189,7 +189,17 @@ void main(void)
          long32Array(UserPara.NegativeTimeBase, uTemp);                         // 更新  反转时间   单位：分钟
          Eeprom_WriteNBytes(NEGATIVE_ROTATE_TIME_BASE, uTemp, 4);  
          
-         UserPara.WorkTime = UserPara.PositiveTimeBase + UserPara.NegativeTimeBase + (UserPara.Duration + 30)/60;    //计算总时间 单位分钟
+         if(UserPara.DirSta != Stall )//正转或者反转时      20200410 增加
+         {
+            UserPara.WorkTime = UserPara.PositiveTimeBase + UserPara.NegativeTimeBase + (UserPara.Duration + 30)/60;    //计算总时间 单位分钟
+         }
+         else                  //停转时
+         {
+            UserPara.WorkTime = UserPara.PositiveTimeBase + UserPara.NegativeTimeBase ;    //计算总时间 单位分钟
+         
+         }
+         
+         
          UserPara.WorkTime = UserPara.WorkTime/6;    // 更新  累计运行时间   单位转换  分钟--> 0.1h
          long32Array(UserPara.WorkTime, uTemp);
          Eeprom_WriteNBytes(WORK_TIME_BASE, uTemp, 4);                         

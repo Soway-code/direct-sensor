@@ -154,8 +154,8 @@ void ReadPara(void)
     Eeprom_ReadNBytes(RUN_ADDR_BASE, Cur_Param, USER_DEFAULT_LEN);
     
     
-   // UserPara.SlaveAddr = Cur_Param[SLAVE_ADDR];  //从机地址
-    UserPara.SlaveAddr = Cur_Param[1];  //从机地址
+    UserPara.SlaveAddr = Cur_Param[SLAVE_ADDR];  //从机地址
+    //UserPara.SlaveAddr = Cur_Param[1];  //从机地址
       
     UserPara.Baudrate = Cur_Param[BAUDRATE];  //波特率
     
@@ -185,22 +185,5 @@ void ReadPara(void)
         UserPara.TotalPulse += ((uint32_t)uTemp[i] << (3 - i) * 8); 
     }
     
-//      for(i = 0; i < 4 ;i ++)
-//    {
-//        uTemp[i] = Cur_Param[DURATION_BASE + i];
-//        UserPara.Duration += ((uint32_t)uTemp[i] << (3 - i) * 8); 
-//    }
-//    
-      
-    //UserPara.FilterLevel = Cur_Param[FILTER_LEVEL];//滤波等级
-    //Switch_Fiter(UserPara.FilterLevel);   //滤波切换
-    
-    //UserPara.DetectThr = ((uint16_t)Cur_Param[DETECT_THR] << 8) + Cur_Param[DETECT_THR + 1];
-    
-    //UserPara.DetectThr2 = ((uint16_t)Cur_Param[DETECT_THR2] << 8) + Cur_Param[DETECT_THR2 + 1];
-    
-    //UserPara.StandbyAlarmThr = ((uint16_t)Cur_Param[STANDBY_ALARM_THR] << 8) + Cur_Param[STANDBY_ALARM_THR + 1];
-    
-    //UserPara.StaVaryDuration = ((uint16_t)Cur_Param[STA_VARY_DURATION] << 8) + Cur_Param[STA_VARY_DURATION + 1];
-   // UserPara.StaVaryDuration = Cur_Param[STA_VARY_DURATION + 1] & 0x00FF;
+
 }
