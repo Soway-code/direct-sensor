@@ -23,8 +23,6 @@
 #include "string.h"
 //#include "adc.h"
 
-
-//BitAction StartFillBufFlag = Bit_RESET;                                         //开始装填数组标志
 uint16_t ADBUF[AD_BUF_MAX];                                     //采集AD值缓冲数组  10个数
 float  LiquidHeight = 0;
 uint16_t LiquidUnit = 0;
@@ -226,13 +224,6 @@ void main(void)
        {     
           Time_1s_flag = 0;
          
-//          UserPara.RotateSpeed  = 0;
-//          for(i = 0; i<3;i++ )
-//          {
-//            UserPara.RotateSpeed +=Pulse100msCntBuf[i];                       
-//          }
-//          UserPara.RotateSpeed *= 20;  //计算旋转速度  1s脉冲数*10 =10秒* 6 = 1分钟  单位：转每分
-       
             if(PulseFlag)  //有脉冲  在转动
             {           
                             
