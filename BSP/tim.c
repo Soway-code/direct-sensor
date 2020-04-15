@@ -8,11 +8,11 @@ TIM_HandleTypeDef    TimHandle;
 TIM_HandleTypeDef TIM22_Handler;      //定时器TIM22句柄 
 
 BitAction  PulseFlag = Bit_RESET;                                         //开始装填数组标志
-uint16_t Pulse100msCntBuf[3] = 0;                                     //每100ms秒脉冲个数数组
+uint16_t Pulse100msCntBuf[3] = {0};                                     //每100ms秒脉冲个数数组
 extern UserTypeDef UserPara;
 
 
-/*//******************************************************************************
+//******************************************************************************
 // 名称         : TIM2_Init()    PA0可用
 // 创建日期     : 2018-06-08
 // 作者         : MMX
@@ -23,7 +23,7 @@ extern UserTypeDef UserPara;
 // 注意和说明   : 无
 // 修改内容     : 无 
 //******************************************************************************
-
+/*
 void TIM2_Init(void)
 {
     uint32_t tmpcr1 = 0U;
@@ -62,6 +62,7 @@ void TIM2_Init(void)
     TIM2->CR1|= TIM_CR1_CEN;                                                    //使能TIM2
 }
 */
+
 //******************************************************************************
 // 名称         : TIM21_ETR_Init()   PA1可用。
 // 创建日期     : 2020-04-03
