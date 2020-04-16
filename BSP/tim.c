@@ -158,9 +158,16 @@ void TIM22_IRQHandler(void)
     HAL_TIM_IRQHandler(&TIM22_Handler);
 }
 
-uint16_t tim_cnt = 0;   //时间累加
+uint16_t tim_cnt = 0;   //总时间累加
+uint16_t tim_1min_cnt = 0;   //1min时间累加
+
 uint8_t Time_1s_flag = 0;
 uint8_t Time_5s_flag = 0;
+uint8_t Time_1min_flag = 0;
+
+extern uint16_t Current_pulse;  //当前脉冲数
+ 
+
 //回调函数，定时器中断服务函数调用
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {     
@@ -171,30 +178,26 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
       {
             tim_cnt++;//
  
-//          if(UserPara.DirSta)  
-//          {
-            UserPara.Duration += 1;   //加一次为0.1s
-//          }
-          read_pulse = TIM21->CNT;    //读取当前脉冲数据
-          TIM21->CNT = 0;
-          
-          
-         UserPara.RotateSpeed = read_pulse * 60;  //计算旋转速度  1s脉冲数*60  HZ/min  单位：转每分
-          UserPara.TotalPulse += read_pulse;  //计总脉冲
-          
-//          memcpy((uint8_t*)Pulse100msCntBuf, (uint8_t*)Pulse100msCntBuf + 2, 4);  //fifo
-//          *(Pulse100msCntBuf + 2) = read_pulse;
+            tim_1min_cnt += 1;   //加一次为1s
+
+            read_pulse = TIM21->CNT;    //读取当前脉冲数据
+            TIM21->CNT = 0;      
+           
          
-          
+          UserPara.TotalPulse += read_pulse;  //计总脉冲        
+            
           if(read_pulse)
-          {
-            PulseFlag = Bit_SET;  //有脉冲
+          {            
+            PulseFlag = Bit_SET;  //有脉冲   转动中
+            Time_1min_flag = 0;
           }
-          else
+            
+          Time_1min_flag++;
+          
+          if((Time_1min_flag > 59) && (read_pulse == 0))
           {
-            PulseFlag = Bit_RESET; //无脉冲
+            PulseFlag = Bit_RESET; //无脉冲  停转
           }
-             
           
           if(!((tim_cnt+1)%1))  //1s
           {
@@ -205,7 +208,12 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
           {
               Time_5s_flag = 1;
           }
+          
+          if(!((tim_cnt +1)%20))//20s计时
+          {
+              UserPara.RotateSpeed = (UserPara.TotalPulse - Current_pulse) * 3 ;  //计算旋转速度  1s脉冲数*60  HZ/min  单位：转每分
+              Current_pulse = UserPara.TotalPulse;              
+          }
       }
-      
 }
  
