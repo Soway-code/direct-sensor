@@ -1,16 +1,16 @@
 /************************************************************************************************************************************************************************
-** °æÈ¨£º   2018-2028, ÉîÛÚÊĞĞÅÎª¿Æ¼¼·¢Õ¹ÓĞÏŞ¹«Ë¾
-** ÎÄ¼şÃû:  main.c
-** ×÷Õß:    MMX
-** °æ±¾:    V1.0.0
-** ÈÕÆÚ:    2018-06-08
-** ÃèÊö:    
-** ¹¦ÄÜ:    ÀûÓÃÔÚ²»Í¬×´Ì¬(Í£³µ µ¡ËÙ ¹¤×÷)ÏÂµçÑ¹²»Í¬À´ÅĞ¶Ï³µÁ¾µÄÔËĞĞ×´Ì¬     
+** ç‰ˆæƒï¼š   2020-2030, æ·±åœ³å¸‚ä¿¡ä¸ºç§‘æŠ€å‘å±•æœ‰é™å…¬å¸
+** æ–‡ä»¶å:  main.c
+** ä½œè€…:    LHL
+** ç‰ˆæœ¬:    V1.0.4
+** æ—¥æœŸ:    2020-04-15
+** æè¿°:    
+** åŠŸèƒ½:    åˆ©ç”¨HAL730è¾“å‡ºæ­£åè½¬é«˜ä½ç”µå¹³ä¿¡å·å’Œè„‰å†²ä¿¡å·ï¼Œåˆ¤æ–­å½“å‰è®¾å¤‡çš„çŠ¶æ€ã€è½¬å‘ã€è½¬é€Ÿã€æ€»è¿è¡Œæ—¶é—´ã€è„‰å†²æ•°åŠå½“å‰çŠ¶æ€æŒç»­æ—¶é—´ã€‚
 *************************************************************************************************************************************************************************
-** ĞŞ¸ÄÕß:      No
-** °æ±¾:  		
-** ĞŞ¸ÄÄÚÈİ:    No 
-** ÈÕÆÚ:        No
+** ä¿®æ”¹è€…:      No
+** ç‰ˆæœ¬:  		
+** ä¿®æ”¹å†…å®¹:    No 
+** æ—¥æœŸ:        No
 *************************************************************************************************************************************************************************/
 
 #include "eeprom.h"
@@ -23,9 +23,7 @@
 #include "string.h"
 //#include "adc.h"
 
-
-//BitAction StartFillBufFlag = Bit_RESET;                                         //¿ªÊ¼×°ÌîÊı×é±êÖ¾
-uint16_t ADBUF[AD_BUF_MAX];                                     //²É¼¯ADÖµ»º³åÊı×é  10¸öÊı
+uint16_t ADBUF[AD_BUF_MAX];                                     //é‡‡é›†ADå€¼ç¼“å†²æ•°ç»„  10ä¸ªæ•°
 float  LiquidHeight = 0;
 uint16_t LiquidUnit = 0;
 
@@ -38,7 +36,7 @@ IWDG_HandleTypeDef  IWDG_HandleStructure;
 extern UserTypeDef UserPara;
  
 u8 LFilCnt = 0;
-u8 time_tick = 10;  //Ä¬ÈÏÂË²¨·½Ê½  ÎªÆ½ÎÈÂË²¨
+u8 time_tick = 10;  //é»˜è®¤æ»¤æ³¢æ–¹å¼  ä¸ºå¹³ç¨³æ»¤æ³¢
 
    // uint32_t systemClock;
     //uint32_t HclkFre;
@@ -47,8 +45,13 @@ u8 time_tick = 10;  //Ä¬ÈÏÂË²¨·½Ê½  ÎªÆ½ÎÈÂË²¨
 extern uint8_t Time_1s_flag;
 extern uint8_t Time_5s_flag;
 extern uint16_t Pulse100msCntBuf[3];
+extern uint16_t tim_cnt;   //å®šæ—¶1S æ—¶é—´ç´¯åŠ 
+
+extern uint16_t Current_PositiveTime ;  //å½“å‰æ­£è½¬è„‰å†²æ•°
+extern uint16_t Current_NegativeTime ;  //å½“å‰åè½¬è„‰å†²æ•°
+extern uint16_t tim_1min_cnt; //1minæ—¶é—´ç´¯åŠ 
 ///*
-//ÏµÍ³Ä¬ÈÏÊ±ÖÓÎªMSI·ÖÆµÎª2M£¬´Ë´¦ÅäÖÃÊ±ÖÓÎªHSI16M(L031µÄÊ±ÖÓ×î´óÎª16M)
+//ç³»ç»Ÿé»˜è®¤æ—¶é’Ÿä¸ºMSIåˆ†é¢‘ä¸º2Mï¼Œæ­¤å¤„é…ç½®æ—¶é’Ÿä¸ºHSI16M(L031çš„æ—¶é’Ÿæœ€å¤§ä¸º16M)
 static void SystemClock_Config(void)
 {
     RCC_ClkInitTypeDef RCC_ClkInitStruct;
@@ -65,7 +68,7 @@ static void SystemClock_Config(void)
 }
 //*/
 
-//GPIOÅäÖÃ
+//GPIOé…ç½®
 void GPIO_Configuration(void)
 {
    GPIO_InitTypeDef GPIO_InitStruct = {0};
@@ -83,20 +86,20 @@ void GPIO_Configuration(void)
 
 
 //******************************************************************************
-// Ãû³Æ         : User_Iwdg_Init()
-// ´´½¨ÈÕÆÚ     : 2018-06-08
-// ×÷Õß         : MMX
-// ¹¦ÄÜ         : ¿´ÃÅ¹·ÅäÖÃ
-// ÊäÈë²ÎÊı     : ÎŞ
-// Êä³ö²ÎÊı     : ÎŞ
-// ·µ»Ø½á¹û     : ÎŞ
-// ×¢ÒâºÍËµÃ÷   : ÎŞ
-// ĞŞ¸ÄÄÚÈİ     : ÎŞ 
+// åç§°         : User_Iwdg_Init()
+// åˆ›å»ºæ—¥æœŸ     : 2018-06-08
+// ä½œè€…         : MMX
+// åŠŸèƒ½         : çœ‹é—¨ç‹—é…ç½®
+// è¾“å…¥å‚æ•°     : æ— 
+// è¾“å‡ºå‚æ•°     : æ— 
+// è¿”å›ç»“æœ     : æ— 
+// æ³¨æ„å’Œè¯´æ˜   : æ— 
+// ä¿®æ”¹å†…å®¹     : æ—  
 //******************************************************************************
 void User_Iwdg_Init(void)
 {
-    IWDG_HandleStructure.Init.Prescaler = IWDG_PRESCALER_8;                     //LSIµÄ32.768µÄ8·ÖÆµÎ»4.096K
-    IWDG_HandleStructure.Init.Reload = 0x0FA0;                                  //ÖØ×°ÔØÖµÎª4000£¬Ô¼1s
+    IWDG_HandleStructure.Init.Prescaler = IWDG_PRESCALER_8;                     //LSIçš„32.768çš„8åˆ†é¢‘ä½4.096K
+    IWDG_HandleStructure.Init.Reload = 0x0FA0;                                  //é‡è£…è½½å€¼ä¸º4000ï¼Œçº¦1s
     IWDG_HandleStructure.Init.Window = 0x0FA0;
     IWDG_HandleStructure.Instance = IWDG;
     HAL_IWDG_Init(&IWDG_HandleStructure);
@@ -104,15 +107,15 @@ void User_Iwdg_Init(void)
 
 
 //******************************************************************************
-// Ãû³Æ         : User_Iwdg_Feed()
-// ´´½¨ÈÕÆÚ     : 2018-06-08
-// ×÷Õß         : MMX
-// ¹¦ÄÜ         : Î¹¹·
-// ÊäÈë²ÎÊı     : ÎŞ
-// Êä³ö²ÎÊı     : ÎŞ
-// ·µ»Ø½á¹û     : ÎŞ
-// ×¢ÒâºÍËµÃ÷   : ÎŞ
-// ĞŞ¸ÄÄÚÈİ     : ÎŞ 
+// åç§°         : User_Iwdg_Feed()
+// åˆ›å»ºæ—¥æœŸ     : 2018-06-08
+// ä½œè€…         : MMX
+// åŠŸèƒ½         : å–‚ç‹—
+// è¾“å…¥å‚æ•°     : æ— 
+// è¾“å‡ºå‚æ•°     : æ— 
+// è¿”å›ç»“æœ     : æ— 
+// æ³¨æ„å’Œè¯´æ˜   : æ— 
+// ä¿®æ”¹å†…å®¹     : æ—  
 //******************************************************************************
 void User_Iwdg_Feed(void)
 {
@@ -121,15 +124,15 @@ void User_Iwdg_Feed(void)
 
  uint8_t zhengfanzhuan; 
 //******************************************************************************
-// Ãû³Æ         : main()
-// ´´½¨ÈÕÆÚ     : 2018-06-08
-// ×÷Õß         : MMX
-// ¹¦ÄÜ         : mainº¯Êı
-// ÊäÈë²ÎÊı     : ÎŞ
-// Êä³ö²ÎÊı     : ÎŞ
-// ·µ»Ø½á¹û     : ÎŞ
-// ×¢ÒâºÍËµÃ÷   : ÎŞ
-// ĞŞ¸ÄÄÚÈİ     : ÎŞ 
+// åç§°         : main()
+// åˆ›å»ºæ—¥æœŸ     : 2018-06-08
+// ä½œè€…         : MMX
+// åŠŸèƒ½         : mainå‡½æ•°
+// è¾“å…¥å‚æ•°     : æ— 
+// è¾“å‡ºå‚æ•°     : æ— 
+// è¿”å›ç»“æœ     : æ— 
+// æ³¨æ„å’Œè¯´æ˜   : æ— 
+// ä¿®æ”¹å†…å®¹     : æ—  
 //******************************************************************************
 void main(void)
 { 
@@ -137,35 +140,32 @@ void main(void)
     uint8_t Z_F_Zhuan;     
     uint8_t uTemp[4];
     
-    SystemClock_Config();                                                       //Ê±ÖÓÅäÖÃÎªHSI 16M
-    SysTick->CTRL&=~SysTick_CTRL_ENABLE_Msk;  //¹Ø±ÕµÎ´ğÊ±ÖÓ
+    SystemClock_Config();                                                       //æ—¶é’Ÿé…ç½®ä¸ºHSI 16M
+    SysTick->CTRL&=~SysTick_CTRL_ENABLE_Msk;  //å…³é—­æ»´ç­”æ—¶é’Ÿ
     GPIO_Configuration();
     // systemClock = HAL_RCC_GetSysClockFreq();
     //HclkFre = HAL_RCC_GetHCLKFreq();
     //Pclk1Fre = HAL_RCC_GetPCLK1Freq();
     //Pclk2Fre = HAL_RCC_GetPCLK2Freq();
   
-    ReadPara();                                                                 //¶ÁÈ¡EEPROM²ÎÊı
-    Uart_Config_Init();                                                         //´®¿ÚÅäÖÃ
-    //TIM2_Init();                                //PA0¶ÁÊı Âö³å¶ÁÊı
+    ReadPara();                                                                 //è¯»å–EEPROMå‚æ•°
+    Uart_Config_Init();                                                         //ä¸²å£é…ç½®
+    //TIM2_Init();                                //PA0è¯»æ•° è„‰å†²è¯»æ•°
     
-//    TIM21_ETR_Init(); //PA1¶ÁÊı Âö³å¶ÁÊı
-//    TIM22_Init();               //100ms¶¨Ê±Æ÷
-     //TIM22_CH2_Init();   //  PA10 Âö³å¼ÆÊıÆ÷ÅäÖÃ
-     TIM2_Init();           //     TIM2¶¨Ê±100ms
-     MX_TIM22_Init();
-   
-     //User_Iwdg_Init();                                                           //¿´ÃÅ¹·ÅäÖÃ
+    TIM21_ETR_Init(); //PA0è¯»æ•° è„‰å†²è¯»æ•°
+    TIM22_Init();                                //100mså®šæ—¶å™¨
+    
+    //User_Iwdg_Init();                                                           //çœ‹é—¨ç‹—é…ç½®
     
     while(1)
     {         
-        //User_Iwdg_Feed();                                                   //Î¹¹·
+        //User_Iwdg_Feed();                                                   //å–‚ç‹—
       
-        MBASC_Function();                                                   //MODBUS´¦Àí
+        MBASC_Function();                                                   //MODBUSå¤„ç†
         
         
         //Delay_Ms(10);
-//       if(Time_1s_flag)  //1s Ê±¼äµ½ ¸üĞÂµ±Ç°Ğı×ªËÙ¶È
+//       if(Time_1s_flag)  //1s æ—¶é—´åˆ° æ›´æ–°å½“å‰æ—‹è½¬é€Ÿåº¦
 //       {
 //          Time_1s_flag = 0;
 //          UserPara.RotateSpeed  = 0;
@@ -173,112 +173,133 @@ void main(void)
 //          {
 //            UserPara.RotateSpeed +=Pulse100msCntBuf[i];                       
 //          }
-//          UserPara.RotateSpeed *= 20;  //¼ÆËãĞı×ªËÙ¶È  1sÂö³åÊı*10 =10Ãë* 6 = 1·ÖÖÓ  µ¥Î»£º×ªÃ¿·Ö
+//          UserPara.RotateSpeed *= 20;  //è®¡ç®—æ—‹è½¬é€Ÿåº¦  1sè„‰å†²æ•°*10 =10ç§’* 6 = 1åˆ†é’Ÿ  å•ä½ï¼šè½¬æ¯åˆ†
 //       }
        
-       if(Time_5s_flag)  //10s Ê±¼äµ½ ¸üĞÂ Êı¾İ  
+       if(Time_5s_flag)  //10s æ—¶é—´åˆ° æ›´æ–° æ•°æ®  
        {
          Time_5s_flag = 0;
                         
-         long32Array(UserPara.TotalPulse, uTemp);                               // ¸üĞÂ  ×ÜÂö³åÊı     µ¥Î»£ºHZ   
+         long32Array(UserPara.TotalPulse, uTemp);                               // æ›´æ–°  æ€»è„‰å†²æ•°     å•ä½ï¼šHZ   
          Eeprom_WriteNBytes(PULSE_TOTAL_BASE, uTemp, 4);
          
-         long32Array(UserPara.PositiveTimeBase, uTemp);                         // ¸üĞÂ  Õı×ªÊ±¼ä   µ¥Î»£º·ÖÖÓ
+         long32Array(UserPara.PositiveTimeBase, uTemp);                         // æ›´æ–°  æ­£è½¬æ—¶é—´   å•ä½ï¼šåˆ†é’Ÿ
          Eeprom_WriteNBytes(POSITIVE_ROTATE_TIME_BASE, uTemp, 4);  
          
-         long32Array(UserPara.NegativeTimeBase, uTemp);                         // ¸üĞÂ  ·´×ªÊ±¼ä   µ¥Î»£º·ÖÖÓ
+         long32Array(UserPara.NegativeTimeBase, uTemp);                         // æ›´æ–°  åè½¬æ—¶é—´   å•ä½ï¼šåˆ†é’Ÿ
          Eeprom_WriteNBytes(NEGATIVE_ROTATE_TIME_BASE, uTemp, 4);  
          
-         if(UserPara.DirSta != Stall )//Õı×ª»òÕß·´×ªÊ±      20200410 Ôö¼Ó
+         if(UserPara.DirSta != Stall )//æ­£è½¬æˆ–è€…åè½¬æ—¶      20200410 å¢åŠ 
          {
-            UserPara.WorkTime = UserPara.PositiveTimeBase + UserPara.NegativeTimeBase + (UserPara.Duration + 30)/60;    //¼ÆËã×ÜÊ±¼ä µ¥Î»·ÖÖÓ
+            UserPara.WorkTime = UserPara.PositiveTimeBase + UserPara.NegativeTimeBase + (UserPara.Duration + 30)/60;    //è®¡ç®—æ€»æ—¶é—´ å•ä½åˆ†é’Ÿ
          }
-         else                  //Í£×ªÊ±
+         else                  //åœè½¬æ—¶
          {
-            UserPara.WorkTime = UserPara.PositiveTimeBase + UserPara.NegativeTimeBase ;    //¼ÆËã×ÜÊ±¼ä µ¥Î»·ÖÖÓ
+            UserPara.WorkTime = UserPara.PositiveTimeBase + UserPara.NegativeTimeBase ;    //è®¡ç®—æ€»æ—¶é—´ å•ä½åˆ†é’Ÿ
          
          }
          
          
-         UserPara.WorkTime = UserPara.WorkTime/6;    // ¸üĞÂ  ÀÛ¼ÆÔËĞĞÊ±¼ä   µ¥Î»×ª»»  ·ÖÖÓ--> 0.1h
+         UserPara.WorkTime = UserPara.WorkTime/6;    // æ›´æ–°  ç´¯è®¡è¿è¡Œæ—¶é—´   å•ä½è½¬æ¢  åˆ†é’Ÿ--> 0.1h
          long32Array(UserPara.WorkTime, uTemp);
          Eeprom_WriteNBytes(WORK_TIME_BASE, uTemp, 4);                         
          
-//         long32Array(UserPara.Duration, uTemp);       // ¸üĞÂ  µ±Ç°×´Ì¬ÔËĞĞÊ±¼ä            µ¥Î» 100ms = 0.1s
-//         Eeprom_WriteNBytes(DURATION_BASE, uTemp, 4); 
+         
+         if(UserPara.DirSta==1)// æ­£è½¬
+         {
+             UserPara.Duration = UserPara.PositiveTimeBase - Current_PositiveTime; //  æ—‹è½¬æ–¹å‘æŒç»­æ—¶é—´    
+         }
+         else if(UserPara.RotateSta==2)// åè½¬
+        { 
+            UserPara.Duration = UserPara.NegativeTimeBase - Current_NegativeTime;//  æ—‹è½¬æ–¹å‘æŒç»­æ—¶é—´   
+         }
+         else
+         {
+            UserPara.Duration = (tim_1min_cnt + 30) / 60;//  åœè½¬æ—¶é—´
+         }
+
        }
         
-       if(Time_1s_flag)    //1s ÅĞ¶ÏÒ»´Î ¸üĞÂµ±Ç°×´Ì¬
+       if(Time_1s_flag)    //1s åˆ¤æ–­ä¸€æ¬¡ æ›´æ–°å½“å‰çŠ¶æ€
        {     
           Time_1s_flag = 0;
          
-//          UserPara.RotateSpeed  = 0;
-//          for(i = 0; i<3;i++ )
-//          {
-//            UserPara.RotateSpeed +=Pulse100msCntBuf[i];                       
-//          }
-//          UserPara.RotateSpeed *= 20;  //¼ÆËãĞı×ªËÙ¶È  1sÂö³åÊı*10 =10Ãë* 6 = 1·ÖÖÓ  µ¥Î»£º×ªÃ¿·Ö
-       
-            if(PulseFlag)  //ÓĞÂö³å  ÔÚ×ª¶¯
+            if(PulseFlag)  //æœ‰è„‰å†²  åœ¨è½¬åŠ¨
             {           
                             
                 Z_F_Zhuan = HAL_GPIO_ReadPin(GPIOA,GPIO_PIN_9);
                 
-                if(Z_F_Zhuan == 1) //Õı×ª
+                if(Z_F_Zhuan == 1) //æ­£è½¬
                 {
-                    if(UserPara.DirSta == Reversal) //ÉÏÒ»´Î×´Ì¬ÊÇ  ·´×ª
+                    if(UserPara.DirSta == Reversal) //ä¸Šä¸€æ¬¡çŠ¶æ€æ˜¯  åè½¬
                     {
-                        UserPara.NegativeTimeBase += (UserPara.Duration + 30)/60;          //¼ÆËã·´×ªÊ±¼ä  +300ÒâË¼ÊÇ³¬¹ı°ë·ÖÖÓËã1·ÖÖÓ
-                        UserPara.Duration = 0;  //Çå0µ±Ç°×´Ì¬¼ÆÊ±
-                    }
-                    if(UserPara.RotateSta == STA_STOP)   //ÉÏÒ»´Î×´Ì¬ÊÇ  Í£×ª
+                        Current_PositiveTime = UserPara.PositiveTimeBase;
+                        UserPara.NegativeTimeBase += (tim_1min_cnt + 30)/60;          //è®¡ç®—åè½¬æ—¶é—´  +30æ„æ€æ˜¯è¶…è¿‡åŠåˆ†é’Ÿç®—1åˆ†é’Ÿ
+                        tim_1min_cnt = 0;  //æ¸…0å½“å‰çŠ¶æ€è®¡æ—¶
+                        tim_cnt = 0;                    }
+                    if(UserPara.RotateSta == STA_STOP)   //ä¸Šä¸€æ¬¡çŠ¶æ€æ˜¯  åœè½¬
                     {
-                        UserPara.Duration = 0;  //Çå0µ±Ç°×´Ì¬¼ÆÊ±
+                        Current_PositiveTime = UserPara.PositiveTimeBase;
+                        tim_1min_cnt = 0;  //æ¸…0å½“å‰çŠ¶æ€è®¡æ—¶
+                          tim_cnt = 0;
                     }
                                             
-                    UserPara.DirSta = Foreward;   // ==1  //Ğı×ª·½Ïò  Õı×ª
+                    UserPara.DirSta = Foreward;   // ==1  //æ—‹è½¬æ–¹å‘  æ­£è½¬
+                             
+                    if(!((tim_cnt +1)%60))//60såˆ°  æ›´æ–°ä¸€æ¬¡æ­£è½¬æ—¶é—´
+                    {
+                        UserPara.PositiveTimeBase += 1;        //60s æ›´æ–°ä¸€æ¬¡æ­£è½¬æ—¶é—´  
+                        tim_1min_cnt = 0;
+                    }
                 }
-                else               //·´×ª
+                else               //åè½¬
                 {
-                    if(UserPara.DirSta == Foreward) //ÉÏÒ»´Î×´Ì¬ÊÇ  Õı×ª
+                    if(UserPara.DirSta == Foreward) //ä¸Šä¸€æ¬¡çŠ¶æ€æ˜¯  æ­£è½¬
                     {
-                        UserPara.PositiveTimeBase += (UserPara.Duration + 30)/60;          //¼ÆËãÕı×ªÊ±¼ä
-                        UserPara.Duration = 0;  //Çå0µ±Ç°×´Ì¬¼ÆÊ±
+                        Current_NegativeTime = UserPara.NegativeTimeBase;
+                        UserPara.PositiveTimeBase += (tim_1min_cnt + 30)/60;          //è®¡ç®—æ­£è½¬æ—¶é—´
+                        tim_1min_cnt = 0;  //æ¸…0å½“å‰çŠ¶æ€è®¡æ—¶
+                        tim_cnt = 0;
                     }
-                    if(UserPara.RotateSta == STA_STOP)   //ÉÏÒ»´Î×´Ì¬ÊÇ  Í£×ª
+                    if(UserPara.RotateSta == STA_STOP)   //ä¸Šä¸€æ¬¡çŠ¶æ€æ˜¯  åœè½¬
                     {
-                        UserPara.Duration = 0;  //Çå0µ±Ç°×´Ì¬¼ÆÊ±
+                        Current_NegativeTime = UserPara.NegativeTimeBase;
+                        tim_1min_cnt = 0;  //æ¸…0å½“å‰çŠ¶æ€è®¡æ—¶
+                          tim_cnt = 0;
                     }
                                             
-                    UserPara.DirSta = Reversal;   // ==0  //Ğı×ª·½Ïò  ·´×ª
+                    UserPara.DirSta = Reversal;   // ==0  //æ—‹è½¬æ–¹å‘  åè½¬
+                    
+                     if(!((tim_cnt +1)%60))//60såˆ°  æ›´æ–°ä¸€æ¬¡åè½¬æ—¶é—´
+                    {
+                        UserPara.NegativeTimeBase += 1;          //60s  æ›´æ–°ä¸€æ¬¡åè½¬æ—¶é—´  
+                        tim_1min_cnt = 0;
+                     }                   
                 }
                 
-                UserPara.RotateSta = STA_WORK;                      //Ğı×ª×´Ì¬   ×ª¶¯ÖĞ
+                UserPara.RotateSta = STA_WORK;                      //æ—‹è½¬çŠ¶æ€   è½¬åŠ¨ä¸­
                 
             }
-            else     //ÎŞÂö³å  Í£Ö¹
+            else     //æ— è„‰å†²  åœæ­¢
             {
-                    if(UserPara.DirSta == Foreward)                      //ÉÏÒ»´Î×´Ì¬ÊÇ  Õı×ª
+                    if(UserPara.DirSta == Foreward)                      //ä¸Šä¸€æ¬¡çŠ¶æ€æ˜¯  æ­£è½¬
                     {
-                        UserPara.PositiveTimeBase += (UserPara.Duration + 30)/60;             //¼ÆËãÕı×ªÊ±¼ä  
-                        UserPara.Duration = 0;                                       //Çå0µ±Ç°×´Ì¬¼ÆÊ±
+                        UserPara.PositiveTimeBase += (tim_1min_cnt + 30)/60;             //è®¡ç®—æ­£è½¬æ—¶é—´  
+                        tim_1min_cnt = 0;                                       //æ¸…0å½“å‰çŠ¶æ€è®¡æ—¶
                     }           
-                     if(UserPara.DirSta == Reversal)                //ÉÏÒ»´Î×´Ì¬ÊÇ  ·´×ª
+                     if(UserPara.DirSta == Reversal)                //ä¸Šä¸€æ¬¡çŠ¶æ€æ˜¯  åè½¬
                     {
-                        UserPara.NegativeTimeBase += (UserPara.Duration + 30)/60;              //¼ÆËã·´×ªÊ±¼ä
-                        UserPara.Duration = 0;                                      //Çå0µ±Ç°×´Ì¬¼ÆÊ±
+                        UserPara.NegativeTimeBase += (tim_1min_cnt + 30)/60;              //è®¡ç®—åè½¬æ—¶é—´
+                        tim_1min_cnt = 0;                                      //æ¸…0å½“å‰çŠ¶æ€è®¡æ—¶
                     }
-    //                if(UserPara.RotateSta == STA_STOP)              //ÉÏÒ»´Î×´Ì¬ÊÇ  Í£×ª
-    //                {
-    //                    UserPara.Duration = 0;  //Çå0µ±Ç°×´Ì¬¼ÆÊ±
-    //                }
+
                                   
-                UserPara.DirSta = Stall; // ==0  //Ğı×ª·½Ïò 
-                UserPara.RotateSta = STA_STOP;     //Ğı×ª×´Ì¬   Í£×ª
+                UserPara.DirSta = Stall; // ==0  //æ—‹è½¬æ–¹å‘ 
+                UserPara.RotateSta = STA_STOP;     //æ—‹è½¬çŠ¶æ€   åœè½¬
                 
             }  
 
-       }                              //end  if(Time_1s_flag)    //1s ÅĞ¶ÏÒ»´Î ¸üĞÂµ±Ç°×´Ì¬
+       }                              //end  if(Time_1s_flag)    //1s åˆ¤æ–­ä¸€æ¬¡ æ›´æ–°å½“å‰çŠ¶æ€
     }                                   //end while 
 }                                       //end main
 

@@ -17,3 +17,13 @@
 版本信息：DirectionSensor_rotation_L031_F3_SV1.0.3.sw    PA1  TIM21_ETR 脉冲读数
 修改内容：
 1. 修改累计运行时间计算，停转时不计入总时间 	TIME：20200410
+
+版本信息：DirectionSensor_rotation_L031_F3_SV1.0.4.sw    PA1  TIM21_ETR 脉冲读数
+修改内容：
+1.  修改正反转  状态保持1分钟 等待1分钟时间到跳停转状态 	TIME：20200413
+
+版本信息：DirectionSensor_rotation_L031_F3_SV1.0.4cs.sw    PA1  TIM21_ETR 脉冲读数
+修改内容：
+1.   修改了速度记录方式，每20S用当前脉冲数减去20S前脉冲数得到速度 	TIME：20200413
+2.   修改了当前状态持续时间计算方式
+3.   增加了 每一分钟更新当前旋转状态时间。
