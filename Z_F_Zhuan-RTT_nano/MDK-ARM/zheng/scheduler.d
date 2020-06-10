@@ -1,0 +1,11 @@
+zheng\scheduler.o: ..\RT-Thread\src\scheduler.c
+zheng\scheduler.o: ..\RT-Thread\include\rtthread.h
+zheng\scheduler.o: ..\APP\rtconfig.h
+zheng\scheduler.o: ..\RT-Thread\include\rtdebug.h
+zheng\scheduler.o: ..\RT-Thread\include\rtdef.h
+zheng\scheduler.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+zheng\scheduler.o: ..\RT-Thread\include\rtservice.h
+zheng\scheduler.o: ..\RT-Thread\include\rtm.h
+zheng\scheduler.o: ..\RT-Thread\include\rtthread.h
+zheng\scheduler.o: ..\RT-Thread\components\finsh\finsh_api.h
+zheng\scheduler.o: ..\RT-Thread\include\rthw.h
