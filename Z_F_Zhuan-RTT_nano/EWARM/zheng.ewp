@@ -350,18 +350,20 @@
                 </option>
                 <option>
                     <name>CCIncludePath2</name>
-                    <state>$PROJ_DIR$/../Drivers/STM32L0xx_HAL_Driver/Inc</state>
-                    <state>$PROJ_DIR$/../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy</state>
-                    <state>$PROJ_DIR$/../Drivers/CMSIS/Device/ST/STM32L0xx/Include</state>
-                    <state>$PROJ_DIR$/../Drivers/CMSIS/Include</state>
-                    <state>E:\STM32\STM32MXCUBE\zheng\APP\inc</state>
-                    <state>E:\STM32\STM32MXCUBE\zheng\BSP\inc</state>
-                    <state>E:\STM32\STM32MXCUBE\zheng\APP</state>
-                    <state>E:\STM32\STM32MXCUBE\zheng\BSP</state>
-                    <state>E:\STM32\STM32MXCUBE\zheng\RT-Thread\components\finsh</state>
-                    <state>E:\STM32\STM32MXCUBE\zheng\RT-Thread\src</state>
-                    <state>E:\STM32\STM32MXCUBE\zheng\RT-Thread\include\libc</state>
-                    <state>E:\STM32\STM32MXCUBE\zheng\RT-Thread\include</state>
+                    <state>E:\STM32\STM32MXCUBE\Z_F_Zhuan-RTT_nano\APP\inc</state>
+                    <state>E:\STM32\STM32MXCUBE\Z_F_Zhuan-RTT_nano\BSP\inc</state>
+                    <state>E:\STM32\STM32MXCUBE\Z_F_Zhuan-RTT_nano\Drivers\STM32L0xx_HAL_Driver\Inc</state>
+                    <state>E:\STM32\STM32MXCUBE\Z_F_Zhuan-RTT_nano\Drivers\STM32L0xx_HAL_Driver\Inc\Legacy</state>
+                    <state>E:\STM32\STM32MXCUBE\Z_F_Zhuan-RTT_nano\Drivers\CMSIS\Device\ST\STM32L0xx\Include</state>
+                    <state>E:\STM32\STM32MXCUBE\Z_F_Zhuan-RTT_nano\Drivers\CMSIS\Include</state>
+                    <state>E:\STM32\STM32MXCUBE\Z_F_Zhuan-RTT_nano\APP</state>
+                    <state>E:\STM32\STM32MXCUBE\Z_F_Zhuan-RTT_nano\BSP</state>
+                    <state>E:\STM32\STM32MXCUBE\Z_F_Zhuan-RTT_nano\APP\inc</state>
+                    <state>E:\STM32\STM32MXCUBE\Z_F_Zhuan-RTT_nano\BSP\inc</state>
+                    <state>E:\STM32\STM32MXCUBE\Z_F_Zhuan-RTT_nano\RT-Thread\components\finsh</state>
+                    <state>E:\STM32\STM32MXCUBE\Z_F_Zhuan-RTT_nano\RT-Thread\src</state>
+                    <state>E:\STM32\STM32MXCUBE\Z_F_Zhuan-RTT_nano\RT-Thread\include\libc</state>
+                    <state>E:\STM32\STM32MXCUBE\Z_F_Zhuan-RTT_nano\RT-Thread\include</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
