@@ -1,0 +1,10 @@
+zheng\cpuport.o: ..\RT-Thread\libcpu\arm\cortex-m0\cpuport.c
+zheng\cpuport.o: ..\RT-Thread\include\rtthread.h
+zheng\cpuport.o: ..\APP\rtconfig.h
+zheng\cpuport.o: ..\RT-Thread\include\rtdebug.h
+zheng\cpuport.o: ..\RT-Thread\include\rtdef.h
+zheng\cpuport.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+zheng\cpuport.o: ..\RT-Thread\include\rtservice.h
+zheng\cpuport.o: ..\RT-Thread\include\rtm.h
+zheng\cpuport.o: ..\RT-Thread\include\rtthread.h
+zheng\cpuport.o: ..\RT-Thread\components\finsh\finsh_api.h

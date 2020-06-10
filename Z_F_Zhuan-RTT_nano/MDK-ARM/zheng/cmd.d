@@ -1,0 +1,17 @@
+zheng\cmd.o: ..\RT-Thread\components\finsh\cmd.c
+zheng\cmd.o: ..\RT-Thread\include\rthw.h
+zheng\cmd.o: ..\RT-Thread\include\rtthread.h
+zheng\cmd.o: ..\APP\rtconfig.h
+zheng\cmd.o: ..\RT-Thread\include\rtdebug.h
+zheng\cmd.o: ..\RT-Thread\include\rtdef.h
+zheng\cmd.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+zheng\cmd.o: ..\RT-Thread\include\rtservice.h
+zheng\cmd.o: ..\RT-Thread\include\rtm.h
+zheng\cmd.o: ..\RT-Thread\include\rtthread.h
+zheng\cmd.o: ..\RT-Thread\components\finsh\finsh_api.h
+zheng\cmd.o: ..\RT-Thread\components\finsh\finsh.h
+zheng\cmd.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+zheng\cmd.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\ctype.h
+zheng\cmd.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+zheng\cmd.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+zheng\cmd.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h

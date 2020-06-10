@@ -1,0 +1,11 @@
+zheng\thread.o: ..\RT-Thread\src\thread.c
+zheng\thread.o: ..\RT-Thread\include\rtthread.h
+zheng\thread.o: ..\APP\rtconfig.h
+zheng\thread.o: ..\RT-Thread\include\rtdebug.h
+zheng\thread.o: ..\RT-Thread\include\rtdef.h
+zheng\thread.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h
+zheng\thread.o: ..\RT-Thread\include\rtservice.h
+zheng\thread.o: ..\RT-Thread\include\rtm.h
+zheng\thread.o: ..\RT-Thread\include\rtthread.h
+zheng\thread.o: ..\RT-Thread\components\finsh\finsh_api.h
+zheng\thread.o: ..\RT-Thread\include\rthw.h
