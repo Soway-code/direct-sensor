@@ -96,6 +96,7 @@ void system_Init(void)
 	SysTick->CTRL&=~SysTick_CTRL_ENABLE_Msk;  	 //关闭滴答时钟
 	
 	Led_Control(1);  //上电绿色
+	HAL_Init();                    	 	    	 //初始化HAL库  
 	ReadPara();                                  //读取EEPROM参数
     Uart_Config_Init();                          //串口配置
     //TIM2_Init();                               //PA0读数 脉冲读数
