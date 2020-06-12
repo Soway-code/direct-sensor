@@ -2,7 +2,7 @@
 
 "D:\Program Files\IAR\arm\bin\armstlink2.dll" 
 
-"E:\STM32\STM32MXCUBE\Z_F_Zhuan-RTT_nano\EWARM\zheng\Exe\zheng.out" 
+"D:\github\direct-sensor\direct-sensor\Z_F_Zhuan-RTT_nano\EWARM\zheng\Exe\zheng.out" 
 
 --plugin="D:\Program Files\IAR\arm\bin\armbat.dll" 
 

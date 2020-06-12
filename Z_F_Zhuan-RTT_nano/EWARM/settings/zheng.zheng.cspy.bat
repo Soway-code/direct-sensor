@@ -25,7 +25,7 @@ if not "%~1" == "" goto debugFile
 
 @echo on 
 
-"D:\Program Files\IAR\common\bin\cspybat" -f "E:\STM32\STM32MXCUBE\Z_F_Zhuan-RTT_nano\EWARM\settings\zheng.zheng.general.xcl" --backend -f "E:\STM32\STM32MXCUBE\Z_F_Zhuan-RTT_nano\EWARM\settings\zheng.zheng.driver.xcl" 
+"D:\Program Files\IAR\common\bin\cspybat" -f "D:\github\direct-sensor\direct-sensor\Z_F_Zhuan-RTT_nano\EWARM\settings\zheng.zheng.general.xcl" --backend -f "D:\github\direct-sensor\direct-sensor\Z_F_Zhuan-RTT_nano\EWARM\settings\zheng.zheng.driver.xcl" 
 
 @echo off 
 goto end 
@@ -34,7 +34,7 @@ goto end
 
 @echo on 
 
-"D:\Program Files\IAR\common\bin\cspybat" -f "E:\STM32\STM32MXCUBE\Z_F_Zhuan-RTT_nano\EWARM\settings\zheng.zheng.general.xcl" "--debug_file=%~1" --backend -f "E:\STM32\STM32MXCUBE\Z_F_Zhuan-RTT_nano\EWARM\settings\zheng.zheng.driver.xcl" 
+"D:\Program Files\IAR\common\bin\cspybat" -f "D:\github\direct-sensor\direct-sensor\Z_F_Zhuan-RTT_nano\EWARM\settings\zheng.zheng.general.xcl" "--debug_file=%~1" --backend -f "D:\github\direct-sensor\direct-sensor\Z_F_Zhuan-RTT_nano\EWARM\settings\zheng.zheng.driver.xcl" 
 
 @echo off 
 :end
