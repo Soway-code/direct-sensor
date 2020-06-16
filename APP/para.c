@@ -4,13 +4,13 @@
 
 UserTypeDef UserPara;
 uint8_t Cur_Param[USER_DEFAULT_LEN];
-extern uint16_t LiquidUnit;
-extern uint8_t  LiquidRange;
+//extern uint16_t LiquidUnit;
+//extern uint8_t  LiquidRange;
 extern uint8_t time_tick;
 
-uint16_t Current_pulse = 0;  //当前脉冲数
-uint16_t Current_PositiveTime = 0;  //当前正转脉冲数
-uint16_t Current_NegativeTime = 0;  //当前反转脉冲数
+uint32_t Current_pulse = 0;  //当前脉冲数
+uint32_t Current_PositiveTime = 0;  //当前正转脉冲数
+uint32_t Current_NegativeTime = 0;  //当前反转脉冲数
 
 //数据的高字节在前，低字节在后（大端模式）
 uint8_t  User_Default_Param[USER_DEFAULT_LEN] =
