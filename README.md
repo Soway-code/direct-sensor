@@ -10,3 +10,6 @@ direct sensor + F3(protocol)
   <img alt="Coverity Scan Build Status"
        src="https://scan.coverity.com/projects/20845/badge.svg"/>
 </a>
+
+
+2020-6-16 upgrade  about cricle time match to the machine run/stop satus time ; Now the seeting time is 3 min 
