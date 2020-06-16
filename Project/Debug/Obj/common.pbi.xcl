@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 "F:\信为产品\正反转\DirectionSensor_rotation_1.2_正反转_L031(F3)\Source\APP\common.c"
+=======
+"E:\project_repo\direct-sensor\Source\APP\common.c"
+>>>>>>> develop
 -std=c11
 -ferror-limit=0
 -fbracket-depth=512
 -I
+<<<<<<< HEAD
 F:\信为产品\正反转\DirectionSensor_rotation_1.2_正反转_L031(F3)\Source\APP
 -I
 F:\信为产品\正反转\DirectionSensor_rotation_1.2_正反转_L031(F3)\Project\..\Source\APP\inc
@@ -32,6 +37,37 @@ F:\信为产品\正反转\DirectionSensor_rotation_1.2_正反转_L031(F3)\Source
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\CMSIS\Core\Include
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\CMSIS\DSP\Include
+=======
+E:\project_repo\direct-sensor\Source\APP
+-I
+E:\project_repo\direct-sensor\Project\..\Source\APP\inc
+-I
+E:\project_repo\direct-sensor\Project\..\Source\BSP\inc
+-I
+E:\project_repo\direct-sensor\Project\..\Source\CMSIS
+-I
+E:\project_repo\direct-sensor\Project\..\Source\FWLib\inc
+-I
+D:\Embedded Workbench 8.1\arm\CMSIS\Core\Include
+-I
+D:\Embedded Workbench 8.1\arm\CMSIS\DSP\Include
+-I
+D:\Embedded Workbench 8.1\arm\inc
+-I
+D:\Embedded Workbench 8.1\arm\inc\c
+-I
+E:\project_repo\direct-sensor\Source\APP\inc
+-I
+E:\project_repo\direct-sensor\Source\BSP\inc
+-I
+E:\project_repo\direct-sensor\Source\CMSIS
+-I
+E:\project_repo\direct-sensor\Source\FWLib\inc
+-I
+D:\Embedded Workbench 8.1\arm\CMSIS\Core\Include
+-I
+D:\Embedded Workbench 8.1\arm\CMSIS\DSP\Include
+>>>>>>> develop
 -D__CHAR_BITS__=8
 -D__CHAR_MAX__=0xff
 -D__CHAR_MIN__=0
@@ -284,8 +320,13 @@ C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\CMSIS\DSP\Include
 -D__EDG_FLOAT128_ENABLING_POSSIBLE=0
 -DSTM32L031xx=1
 -DUSE_HAL_DRIVER=1
+<<<<<<< HEAD
 -D_DLIB_CONFIG_FILE_HEADER_NAME="C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.1\\arm\\inc\\c\\DLib_Config_Normal.h"
 -D_DLIB_CONFIG_FILE_STRING="C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.1\\arm\\inc\\c\\DLib_Config_Normal.h"
+=======
+-D_DLIB_CONFIG_FILE_HEADER_NAME="D:\\Embedded Workbench 8.1\\arm\\inc\\c\\DLib_Config_Normal.h"
+-D_DLIB_CONFIG_FILE_STRING="D:\\Embedded Workbench 8.1\\arm\\inc\\c\\DLib_Config_Normal.h"
+>>>>>>> develop
 -D__VERSION__="IAR ANSI C/C++ Compiler V8.30.1.114/W32 for ARM"
 -D__ICCARM_OLD_DEFINED_VAARGS__=1
 -D__VA_STACK_ALIGN__=8

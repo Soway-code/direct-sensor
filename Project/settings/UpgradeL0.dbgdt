@@ -1367,11 +1367,16 @@
                     <item>read_pulse</item>
                     <item>Cur_Param</item>
                     <item>UserPara</item>
+<<<<<<< HEAD
                     <item>Current_pulse</item>
                     <item>tim_1min_cnt</item>
                     <item>Current_PositiveTime</item>
                     <item>Current_NegativeTime</item>
                     <item></item>
+=======
+                    <item>UserPara</item>
+                    <item />
+>>>>>>> develop
                 </expressions>
                 <col-names>
                     <item>Expression</item>
