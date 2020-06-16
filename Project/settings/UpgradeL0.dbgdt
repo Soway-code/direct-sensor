@@ -1368,7 +1368,7 @@
                     <item>Cur_Param</item>
                     <item>UserPara</item>
                     <item>UserPara</item>
-                    <item></item>
+                    <item />
                 </expressions>
                 <col-names>
                     <item>Expression</item>

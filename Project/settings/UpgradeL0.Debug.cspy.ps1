@@ -23,9 +23,9 @@
 
 if ($debugfile -eq "")
 {
-& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\common\bin\cspybat" -f "F:\信为产品\正反转\DirectionSensor_rotation_1.2_正反转_L031(F3)\Project\settings\UpgradeL0.Debug.general.xcl" --backend -f "F:\信为产品\正反转\DirectionSensor_rotation_1.2_正反转_L031(F3)\Project\settings\UpgradeL0.Debug.driver.xcl" 
+& "D:\Embedded Workbench 8.1\common\bin\cspybat" -f "E:\project_repo\direct-sensor\Project\settings\UpgradeL0.Debug.general.xcl" --backend -f "E:\project_repo\direct-sensor\Project\settings\UpgradeL0.Debug.driver.xcl" 
 }
 else
 {
-& "C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\common\bin\cspybat" -f "F:\信为产品\正反转\DirectionSensor_rotation_1.2_正反转_L031(F3)\Project\settings\UpgradeL0.Debug.general.xcl" --debug_file=$debugfile --backend -f "F:\信为产品\正反转\DirectionSensor_rotation_1.2_正反转_L031(F3)\Project\settings\UpgradeL0.Debug.driver.xcl" 
+& "D:\Embedded Workbench 8.1\common\bin\cspybat" -f "E:\project_repo\direct-sensor\Project\settings\UpgradeL0.Debug.general.xcl" --debug_file=$debugfile --backend -f "E:\project_repo\direct-sensor\Project\settings\UpgradeL0.Debug.driver.xcl" 
 }
