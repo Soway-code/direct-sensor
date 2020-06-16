@@ -12,4 +12,4 @@ direct sensor + F3(protocol)
 </a>
 
 
-2020-6-16 upgrade  about cricle time match to the machine run/stop status hold time ; Now the set-time is 3 min 
+2020-6-16 upgrade  about cricle time match to the machine run/stop status hold time ; Now the seting-time is 3 min 
