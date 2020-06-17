@@ -26,7 +26,7 @@
 
 RNG_HandleTypeDef hrng;
 
-#define FILTER_A 1
+#define FILTER_A 1    //限幅幅度
 
 int Value;
 
@@ -77,8 +77,11 @@ void HAL_RNG_MspDeInit(RNG_HandleTypeDef* rngHandle)
   }
 } 
 
-//得到随机数
-//返回值:获取到的随机数
+
+/**@brief       得到随机数
+* @param    	None
+* @return       获取到的随机数
+*/
 uint32_t RNG_Get_RandomNum(void)
 {
 	uint32_t randomnum;
@@ -87,7 +90,10 @@ uint32_t RNG_Get_RandomNum(void)
 	return randomnum;
 }
 
-//生成[min,max]范围的随机数
+/**@brief       生成[min,max]范围的随机数
+* @param        None
+* @return       随机数
+*/
 int RNG_Get_RandomRange(int min,int max)
 { 
 	uint32_t randomnum;
@@ -96,9 +102,10 @@ int RNG_Get_RandomRange(int min,int max)
 	return randomnum%(max-min+1)+min;
 }
 
-
-// 限幅滤波法（又称程序判断滤波法）
-
+/**@brief       限幅滤波法（又称程序判断滤波法）
+* @param        None
+* @return       函数执行结果
+*/
 int Filter() 
 {
 	int NewValue;

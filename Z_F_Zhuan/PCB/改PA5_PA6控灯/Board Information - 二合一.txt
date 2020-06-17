@@ -1,0 +1,12 @@
+Board Information Report
+Filename     : F:\Repo\direct-sensor\PCB\改PA5_PA6控灯\二合一.~(12).pcbdoc
+Date         : 2020/4/30
+Time         : 16:35:11
+Time Elapsed : 00:00:00
+
+Routing Information
+    Routing completion, 100.00%
+    Connections, 84
+    Connections routed, 84
+    Connections remaining, 0
+count : 4

@@ -1,151 +1,51 @@
 ###############################################################################
 #
-# IAR ELF Linker V8.30.1.114/W32 for ARM                  15/Apr/2020  10:54:46
+# IAR ELF Linker V8.32.1.169/W32 for ARM                  17/Jun/2020  09:16:50
 # Copyright 2007-2018 IAR Systems AB.
 #
 #    Output file  =  
-#        F:\信为产品\05 -
-#        正反转\DirectionSensor_rotation_1.2_正反转_L031(F3)
-#        调试第4版 修改累计运行时间 20200410
-#        V1.0.3\DirectionSensor_rotation_1.2_正反转_L031(F3)\Project\Debug\Exe\WorkTime_L031_F3.out
+#        D:\github\wireless\direct-sensor\Z_F_Zhuan\Project\Debug\Exe\WorkTime_L031_F3.out
 #    Map file     =  
-#        F:\信为产品\05 -
-#        正反转\DirectionSensor_rotation_1.2_正反转_L031(F3)
-#        调试第4版 修改累计运行时间 20200410
-#        V1.0.3\DirectionSensor_rotation_1.2_正反转_L031(F3)\Project\Debug\List\WorkTime_L031_F3.map
+#        D:\github\wireless\direct-sensor\Z_F_Zhuan\Project\Debug\List\WorkTime_L031_F3.map
 #    Command line =  
-#        -f C:\Users\李\AppData\Local\Temp\EW218A.tmp ("F:\信为产品\05 -
-#        正反转\DirectionSensor_rotation_1.2_正反转_L031(F3)
-#        调试第4版 修改累计运行时间 20200410
-#        V1.0.3\DirectionSensor_rotation_1.2_正反转_L031(F3)\Project\Debug\Obj\adc.o"
-#        "F:\信为产品\05 -
-#        正反转\DirectionSensor_rotation_1.2_正反转_L031(F3)
-#        调试第4版 修改累计运行时间 20200410
-#        V1.0.3\DirectionSensor_rotation_1.2_正反转_L031(F3)\Project\Debug\Obj\common.o"
-#        "F:\信为产品\05 -
-#        正反转\DirectionSensor_rotation_1.2_正反转_L031(F3)
-#        调试第4版 修改累计运行时间 20200410
-#        V1.0.3\DirectionSensor_rotation_1.2_正反转_L031(F3)\Project\Debug\Obj\eeprom.o"
-#        "F:\信为产品\05 -
-#        正反转\DirectionSensor_rotation_1.2_正反转_L031(F3)
-#        调试第4版 修改累计运行时间 20200410
-#        V1.0.3\DirectionSensor_rotation_1.2_正反转_L031(F3)\Project\Debug\Obj\main.o"
-#        "F:\信为产品\05 -
-#        正反转\DirectionSensor_rotation_1.2_正反转_L031(F3)
-#        调试第4版 修改累计运行时间 20200410
-#        V1.0.3\DirectionSensor_rotation_1.2_正反转_L031(F3)\Project\Debug\Obj\modbus_asc.o"
-#        "F:\信为产品\05 -
-#        正反转\DirectionSensor_rotation_1.2_正反转_L031(F3)
-#        调试第4版 修改累计运行时间 20200410
-#        V1.0.3\DirectionSensor_rotation_1.2_正反转_L031(F3)\Project\Debug\Obj\modbus_ascii.o"
-#        "F:\信为产品\05 -
-#        正反转\DirectionSensor_rotation_1.2_正反转_L031(F3)
-#        调试第4版 修改累计运行时间 20200410
-#        V1.0.3\DirectionSensor_rotation_1.2_正反转_L031(F3)\Project\Debug\Obj\para.o"
-#        "F:\信为产品\05 -
-#        正反转\DirectionSensor_rotation_1.2_正反转_L031(F3)
-#        调试第4版 修改累计运行时间 20200410
-#        V1.0.3\DirectionSensor_rotation_1.2_正反转_L031(F3)\Project\Debug\Obj\startup_stm32l031xx.o"
-#        "F:\信为产品\05 -
-#        正反转\DirectionSensor_rotation_1.2_正反转_L031(F3)
-#        调试第4版 修改累计运行时间 20200410
-#        V1.0.3\DirectionSensor_rotation_1.2_正反转_L031(F3)\Project\Debug\Obj\stm32l0xx_hal.o"
-#        "F:\信为产品\05 -
-#        正反转\DirectionSensor_rotation_1.2_正反转_L031(F3)
-#        调试第4版 修改累计运行时间 20200410
-#        V1.0.3\DirectionSensor_rotation_1.2_正反转_L031(F3)\Project\Debug\Obj\stm32l0xx_hal_adc.o"
-#        "F:\信为产品\05 -
-#        正反转\DirectionSensor_rotation_1.2_正反转_L031(F3)
-#        调试第4版 修改累计运行时间 20200410
-#        V1.0.3\DirectionSensor_rotation_1.2_正反转_L031(F3)\Project\Debug\Obj\stm32l0xx_hal_adc_ex.o"
-#        "F:\信为产品\05 -
-#        正反转\DirectionSensor_rotation_1.2_正反转_L031(F3)
-#        调试第4版 修改累计运行时间 20200410
-#        V1.0.3\DirectionSensor_rotation_1.2_正反转_L031(F3)\Project\Debug\Obj\stm32l0xx_hal_comp.o"
-#        "F:\信为产品\05 -
-#        正反转\DirectionSensor_rotation_1.2_正反转_L031(F3)
-#        调试第4版 修改累计运行时间 20200410
-#        V1.0.3\DirectionSensor_rotation_1.2_正反转_L031(F3)\Project\Debug\Obj\stm32l0xx_hal_comp_ex.o"
-#        "F:\信为产品\05 -
-#        正反转\DirectionSensor_rotation_1.2_正反转_L031(F3)
-#        调试第4版 修改累计运行时间 20200410
-#        V1.0.3\DirectionSensor_rotation_1.2_正反转_L031(F3)\Project\Debug\Obj\stm32l0xx_hal_cortex.o"
-#        "F:\信为产品\05 -
-#        正反转\DirectionSensor_rotation_1.2_正反转_L031(F3)
-#        调试第4版 修改累计运行时间 20200410
-#        V1.0.3\DirectionSensor_rotation_1.2_正反转_L031(F3)\Project\Debug\Obj\stm32l0xx_hal_dma.o"
-#        "F:\信为产品\05 -
-#        正反转\DirectionSensor_rotation_1.2_正反转_L031(F3)
-#        调试第4版 修改累计运行时间 20200410
-#        V1.0.3\DirectionSensor_rotation_1.2_正反转_L031(F3)\Project\Debug\Obj\stm32l0xx_hal_flash.o"
-#        "F:\信为产品\05 -
-#        正反转\DirectionSensor_rotation_1.2_正反转_L031(F3)
-#        调试第4版 修改累计运行时间 20200410
-#        V1.0.3\DirectionSensor_rotation_1.2_正反转_L031(F3)\Project\Debug\Obj\stm32l0xx_hal_flash_ex.o"
-#        "F:\信为产品\05 -
-#        正反转\DirectionSensor_rotation_1.2_正反转_L031(F3)
-#        调试第4版 修改累计运行时间 20200410
-#        V1.0.3\DirectionSensor_rotation_1.2_正反转_L031(F3)\Project\Debug\Obj\stm32l0xx_hal_flash_ramfunc.o"
-#        "F:\信为产品\05 -
-#        正反转\DirectionSensor_rotation_1.2_正反转_L031(F3)
-#        调试第4版 修改累计运行时间 20200410
-#        V1.0.3\DirectionSensor_rotation_1.2_正反转_L031(F3)\Project\Debug\Obj\stm32l0xx_hal_gpio.o"
-#        "F:\信为产品\05 -
-#        正反转\DirectionSensor_rotation_1.2_正反转_L031(F3)
-#        调试第4版 修改累计运行时间 20200410
-#        V1.0.3\DirectionSensor_rotation_1.2_正反转_L031(F3)\Project\Debug\Obj\stm32l0xx_hal_iwdg.o"
-#        "F:\信为产品\05 -
-#        正反转\DirectionSensor_rotation_1.2_正反转_L031(F3)
-#        调试第4版 修改累计运行时间 20200410
-#        V1.0.3\DirectionSensor_rotation_1.2_正反转_L031(F3)\Project\Debug\Obj\stm32l0xx_hal_rcc.o"
-#        "F:\信为产品\05 -
-#        正反转\DirectionSensor_rotation_1.2_正反转_L031(F3)
-#        调试第4版 修改累计运行时间 20200410
-#        V1.0.3\DirectionSensor_rotation_1.2_正反转_L031(F3)\Project\Debug\Obj\stm32l0xx_hal_rcc_ex.o"
-#        "F:\信为产品\05 -
-#        正反转\DirectionSensor_rotation_1.2_正反转_L031(F3)
-#        调试第4版 修改累计运行时间 20200410
-#        V1.0.3\DirectionSensor_rotation_1.2_正反转_L031(F3)\Project\Debug\Obj\stm32l0xx_hal_tim.o"
-#        "F:\信为产品\05 -
-#        正反转\DirectionSensor_rotation_1.2_正反转_L031(F3)
-#        调试第4版 修改累计运行时间 20200410
-#        V1.0.3\DirectionSensor_rotation_1.2_正反转_L031(F3)\Project\Debug\Obj\stm32l0xx_hal_tim_ex.o"
-#        "F:\信为产品\05 -
-#        正反转\DirectionSensor_rotation_1.2_正反转_L031(F3)
-#        调试第4版 修改累计运行时间 20200410
-#        V1.0.3\DirectionSensor_rotation_1.2_正反转_L031(F3)\Project\Debug\Obj\stm32l0xx_hal_uart.o"
-#        "F:\信为产品\05 -
-#        正反转\DirectionSensor_rotation_1.2_正反转_L031(F3)
-#        调试第4版 修改累计运行时间 20200410
-#        V1.0.3\DirectionSensor_rotation_1.2_正反转_L031(F3)\Project\Debug\Obj\stm32l0xx_hal_uart_ex.o"
-#        "F:\信为产品\05 -
-#        正反转\DirectionSensor_rotation_1.2_正反转_L031(F3)
-#        调试第4版 修改累计运行时间 20200410
-#        V1.0.3\DirectionSensor_rotation_1.2_正反转_L031(F3)\Project\Debug\Obj\stm32l0xx_hal_usart.o"
-#        "F:\信为产品\05 -
-#        正反转\DirectionSensor_rotation_1.2_正反转_L031(F3)
-#        调试第4版 修改累计运行时间 20200410
-#        V1.0.3\DirectionSensor_rotation_1.2_正反转_L031(F3)\Project\Debug\Obj\system_stm32l0xx.o"
-#        "F:\信为产品\05 -
-#        正反转\DirectionSensor_rotation_1.2_正反转_L031(F3)
-#        调试第4版 修改累计运行时间 20200410
-#        V1.0.3\DirectionSensor_rotation_1.2_正反转_L031(F3)\Project\Debug\Obj\tim.o"
-#        "F:\信为产品\05 -
-#        正反转\DirectionSensor_rotation_1.2_正反转_L031(F3)
-#        调试第4版 修改累计运行时间 20200410
-#        V1.0.3\DirectionSensor_rotation_1.2_正反转_L031(F3)\Project\Debug\Obj\usart.o"
-#        --no_out_extension -o "F:\信为产品\05 -
-#        正反转\DirectionSensor_rotation_1.2_正反转_L031(F3)
-#        调试第4版 修改累计运行时间 20200410
-#        V1.0.3\DirectionSensor_rotation_1.2_正反转_L031(F3)\Project\Debug\Exe\WorkTime_L031_F3.out"
-#        --map "F:\信为产品\05 -
-#        正反转\DirectionSensor_rotation_1.2_正反转_L031(F3)
-#        调试第4版 修改累计运行时间 20200410
-#        V1.0.3\DirectionSensor_rotation_1.2_正反转_L031(F3)\Project\Debug\List\WorkTime_L031_F3.map"
-#        --config "F:\信为产品\05 -
-#        正反转\DirectionSensor_rotation_1.2_正反转_L031(F3)
-#        调试第4版 修改累计运行时间 20200410
-#        V1.0.3\DirectionSensor_rotation_1.2_正反转_L031(F3)\Project\stm32l031xx_flash.icf"
+#        -f C:\Users\Soway\AppData\Local\Temp\EW7B4E.tmp
+#        (D:\github\wireless\direct-sensor\Z_F_Zhuan\Project\Debug\Obj\adc.o
+#        D:\github\wireless\direct-sensor\Z_F_Zhuan\Project\Debug\Obj\common.o
+#        D:\github\wireless\direct-sensor\Z_F_Zhuan\Project\Debug\Obj\eeprom.o
+#        D:\github\wireless\direct-sensor\Z_F_Zhuan\Project\Debug\Obj\FlashIf.o
+#        D:\github\wireless\direct-sensor\Z_F_Zhuan\Project\Debug\Obj\main.o
+#        D:\github\wireless\direct-sensor\Z_F_Zhuan\Project\Debug\Obj\modbus_asc.o
+#        D:\github\wireless\direct-sensor\Z_F_Zhuan\Project\Debug\Obj\modbus_ascii.o
+#        D:\github\wireless\direct-sensor\Z_F_Zhuan\Project\Debug\Obj\para.o
+#        D:\github\wireless\direct-sensor\Z_F_Zhuan\Project\Debug\Obj\startup_stm32l031xx.o
+#        D:\github\wireless\direct-sensor\Z_F_Zhuan\Project\Debug\Obj\stm32l0xx_hal.o
+#        D:\github\wireless\direct-sensor\Z_F_Zhuan\Project\Debug\Obj\stm32l0xx_hal_adc.o
+#        D:\github\wireless\direct-sensor\Z_F_Zhuan\Project\Debug\Obj\stm32l0xx_hal_adc_ex.o
+#        D:\github\wireless\direct-sensor\Z_F_Zhuan\Project\Debug\Obj\stm32l0xx_hal_comp.o
+#        D:\github\wireless\direct-sensor\Z_F_Zhuan\Project\Debug\Obj\stm32l0xx_hal_comp_ex.o
+#        D:\github\wireless\direct-sensor\Z_F_Zhuan\Project\Debug\Obj\stm32l0xx_hal_cortex.o
+#        D:\github\wireless\direct-sensor\Z_F_Zhuan\Project\Debug\Obj\stm32l0xx_hal_dma.o
+#        D:\github\wireless\direct-sensor\Z_F_Zhuan\Project\Debug\Obj\stm32l0xx_hal_flash.o
+#        D:\github\wireless\direct-sensor\Z_F_Zhuan\Project\Debug\Obj\stm32l0xx_hal_flash_ex.o
+#        D:\github\wireless\direct-sensor\Z_F_Zhuan\Project\Debug\Obj\stm32l0xx_hal_flash_ramfunc.o
+#        D:\github\wireless\direct-sensor\Z_F_Zhuan\Project\Debug\Obj\stm32l0xx_hal_gpio.o
+#        D:\github\wireless\direct-sensor\Z_F_Zhuan\Project\Debug\Obj\stm32l0xx_hal_iwdg.o
+#        D:\github\wireless\direct-sensor\Z_F_Zhuan\Project\Debug\Obj\stm32l0xx_hal_rcc.o
+#        D:\github\wireless\direct-sensor\Z_F_Zhuan\Project\Debug\Obj\stm32l0xx_hal_rcc_ex.o
+#        D:\github\wireless\direct-sensor\Z_F_Zhuan\Project\Debug\Obj\stm32l0xx_hal_tim.o
+#        D:\github\wireless\direct-sensor\Z_F_Zhuan\Project\Debug\Obj\stm32l0xx_hal_tim_ex.o
+#        D:\github\wireless\direct-sensor\Z_F_Zhuan\Project\Debug\Obj\stm32l0xx_hal_uart.o
+#        D:\github\wireless\direct-sensor\Z_F_Zhuan\Project\Debug\Obj\stm32l0xx_hal_uart_ex.o
+#        D:\github\wireless\direct-sensor\Z_F_Zhuan\Project\Debug\Obj\stm32l0xx_hal_usart.o
+#        D:\github\wireless\direct-sensor\Z_F_Zhuan\Project\Debug\Obj\system_stm32l0xx.o
+#        D:\github\wireless\direct-sensor\Z_F_Zhuan\Project\Debug\Obj\tim.o
+#        D:\github\wireless\direct-sensor\Z_F_Zhuan\Project\Debug\Obj\usart.o
+#        --no_out_extension -o
+#        D:\github\wireless\direct-sensor\Z_F_Zhuan\Project\Debug\Exe\WorkTime_L031_F3.out
+#        --map
+#        D:\github\wireless\direct-sensor\Z_F_Zhuan\Project\Debug\List\WorkTime_L031_F3.map
+#        --config
+#        D:\github\wireless\direct-sensor\Z_F_Zhuan\Project\stm32l031xx_flash.icf
 #        --semihosting --entry __iar_program_start --vfe --text_out locale)
 #
 ###############################################################################
@@ -187,102 +87,105 @@ initialize by copy { rw };
   .intvec            ro code   0x800'2000    0xc0  startup_stm32l031xx.o [1]
                              - 0x800'20c0    0xc0
 
-"P1":                                      0x1c44
+"P1":                                      0x1d7c
   .text              ro code   0x800'20c0   0x6ec  modbus_asc.o [1]
-  .text              ro code   0x800'27ac    0x2e  common.o [1]
-  .text              ro code   0x800'27da     0x2  startup_stm32l031xx.o [1]
-  .text              ro code   0x800'27dc   0x284  modbus_ascii.o [1]
-  .text              ro code   0x800'2a60    0x78  eeprom.o [1]
-  .text              ro code   0x800'2ad8    0xdc  para.o [1]
-  .text              ro code   0x800'2bb4   0x328  usart.o [1]
-  .text              ro code   0x800'2edc    0x34  stm32l0xx_hal_flash_ex.o [1]
-  .text              ro code   0x800'2f10    0x6a  I64DivMod.o [4]
-  .text              ro code   0x800'2f7a     0x2  startup_stm32l031xx.o [1]
-  .text              ro code   0x800'2f7c     0x2  I64DivZer.o [4]
-  .text              ro code   0x800'2f7e     0x2  startup_stm32l031xx.o [1]
-  .text              ro code   0x800'2f80   0x29c  main.o [1]
-  .text              ro code   0x800'321c   0x20c  stm32l0xx_hal_rcc.o [1]
-  .text              ro code   0x800'3428    0x32  ABImemset.o [4]
-  .text              ro code   0x800'345a     0x2  startup_stm32l031xx.o [1]
-  .text              ro code   0x800'345c   0x194  stm32l0xx_hal_gpio.o [1]
-  .text              ro code   0x800'35f0   0x19c  tim.o [1]
-  .text              ro code   0x800'378c    0xe0  I32DivModFast.o [4]
-  .text              ro code   0x800'386c     0xc  stm32l0xx_hal.o [1]
-  .text              ro code   0x800'3878    0x28  stm32l0xx_hal.o [1]
-  .text              ro code   0x800'38a0   0x1e0  stm32l0xx_hal_tim.o [1]
-  .text              ro code   0x800'3a80    0xa8  stm32l0xx_hal_cortex.o [1]
-  .text              ro code   0x800'3b28     0x2  IntDivZer.o [4]
-  .text              ro code   0x800'3b2a     0x2  stm32l0xx_hal_tim.o [1]
-  .text              ro code   0x800'3b2c     0x2  stm32l0xx_hal_tim.o [1]
-  .text              ro code   0x800'3b2e     0x2  stm32l0xx_hal_tim.o [1]
-  .text              ro code   0x800'3b30     0x2  stm32l0xx_hal_tim.o [1]
-  .text              ro code   0x800'3b32     0x2  startup_stm32l031xx.o [1]
-  .text              ro code   0x800'3b34    0x78  system_stm32l0xx.o [1]
-  .text              ro code   0x800'3bac    0x3c  zero_init3.o [4]
-  .text              ro code   0x800'3be8    0x3c  packbits_init_single.o [4]
-  .text              ro code   0x800'3c24    0x28  data_init.o [4]
-  .iar.init_table    const     0x800'3c4c    0x20  - Linker created -
-  .text              ro code   0x800'3c6c    0x1e  cmain.o [4]
-  .text              ro code   0x800'3c8a     0x4  low_level_init.o [2]
-  .text              ro code   0x800'3c8e     0x8  exit.o [2]
-  .text              ro code   0x800'3c96     0x2  startup_stm32l031xx.o [1]
-  .text              ro code   0x800'3c98     0xa  cexit.o [4]
-  .text              ro code   0x800'3ca2     0x2  startup_stm32l031xx.o [1]
-  .text              ro code   0x800'3ca4    0x14  exit.o [5]
-  .text              ro code   0x800'3cb8    0x10  startup_stm32l031xx.o [1]
-  .text              ro code   0x800'3cc8     0xc  cstartup_M.o [4]
-  .text              ro code   0x800'3cd4     0x2  startup_stm32l031xx.o [1]
-  .text              ro code   0x800'3cd6     0x2  startup_stm32l031xx.o [1]
-  .text              ro code   0x800'3cd8     0x2  startup_stm32l031xx.o [1]
-  .text              ro code   0x800'3cda     0x2  startup_stm32l031xx.o [1]
-  .text              ro code   0x800'3cdc     0x2  startup_stm32l031xx.o [1]
-  .text              ro code   0x800'3cde     0x2  startup_stm32l031xx.o [1]
-  .text              ro code   0x800'3ce0     0x2  startup_stm32l031xx.o [1]
-  .text              ro code   0x800'3ce2     0x2  startup_stm32l031xx.o [1]
-  .text              ro code   0x800'3ce4     0x2  startup_stm32l031xx.o [1]
-  .text              ro code   0x800'3ce6     0x2  startup_stm32l031xx.o [1]
-  .text              ro code   0x800'3ce8     0x2  startup_stm32l031xx.o [1]
-  .text              ro code   0x800'3cea     0x2  startup_stm32l031xx.o [1]
-  .text              ro code   0x800'3cec     0x2  startup_stm32l031xx.o [1]
-  .text              ro code   0x800'3cee     0x2  startup_stm32l031xx.o [1]
-  .text              ro code   0x800'3cf0     0x2  startup_stm32l031xx.o [1]
-  .text              ro code   0x800'3cf2     0x2  startup_stm32l031xx.o [1]
-  .rodata            const     0x800'3cf4     0x0  zero_init3.o [4]
-  .rodata            const     0x800'3cf4     0x0  packbits_init_single.o [4]
-  Initializer bytes  const     0x800'3cf4    0x10  <for P2-1>
-                             - 0x800'3d04  0x1c44
+  .text              ro code   0x800'27ac    0x18  stm32l0xx_hal.o [1]
+  .text              ro code   0x800'27c4   0x284  modbus_ascii.o [1]
+  .text              ro code   0x800'2a48    0x78  eeprom.o [1]
+  .text              ro code   0x800'2ac0    0xdc  para.o [1]
+  .text              ro code   0x800'2b9c    0x1e  common.o [1]
+  .text              ro code   0x800'2bba     0x2  startup_stm32l031xx.o [1]
+  .text              ro code   0x800'2bbc   0x328  usart.o [1]
+  .text              ro code   0x800'2ee4     0xc  stm32l0xx_hal.o [1]
+  .text              ro code   0x800'2ef0    0x34  stm32l0xx_hal_flash_ex.o [1]
+  .text              ro code   0x800'2f24    0x6a  I64DivMod.o [4]
+  .text              ro code   0x800'2f8e     0x2  startup_stm32l031xx.o [1]
+  .text              ro code   0x800'2f90     0x2  I64DivZer.o [4]
+  .text              ro code   0x800'2f92     0x2  startup_stm32l031xx.o [1]
+  .text              ro code   0x800'2f94   0x330  main.o [1]
+  .text              ro code   0x800'32c4   0x1a0  stm32l0xx_hal_gpio.o [1]
+  .text              ro code   0x800'3464   0x20c  stm32l0xx_hal_rcc.o [1]
+  .text              ro code   0x800'3670    0x32  ABImemset.o [4]
+  .text              ro code   0x800'36a2     0x2  startup_stm32l031xx.o [1]
+  .text              ro code   0x800'36a4    0x68  stm32l0xx_hal_iwdg.o [1]
+  .text              ro code   0x800'370c   0x1c4  tim.o [1]
+  .text              ro code   0x800'38d0    0xe0  I32DivModFast.o [4]
+  .text              ro code   0x800'39b0    0x28  stm32l0xx_hal.o [1]
+  .text              ro code   0x800'39d8   0x1e0  stm32l0xx_hal_tim.o [1]
+  .text              ro code   0x800'3bb8    0xa8  stm32l0xx_hal_cortex.o [1]
+  .text              ro code   0x800'3c60     0x2  IntDivZer.o [4]
+  .text              ro code   0x800'3c62     0x2  stm32l0xx_hal_tim.o [1]
+  .text              ro code   0x800'3c64     0x2  stm32l0xx_hal_tim.o [1]
+  .text              ro code   0x800'3c66     0x2  stm32l0xx_hal_tim.o [1]
+  .text              ro code   0x800'3c68     0x2  stm32l0xx_hal_tim.o [1]
+  .text              ro code   0x800'3c6a     0x2  startup_stm32l031xx.o [1]
+  .text              ro code   0x800'3c6c    0x78  system_stm32l0xx.o [1]
+  .text              ro code   0x800'3ce4    0x3c  zero_init3.o [4]
+  .text              ro code   0x800'3d20    0x3c  packbits_init_single.o [4]
+  .text              ro code   0x800'3d5c    0x28  data_init.o [4]
+  .iar.init_table    const     0x800'3d84    0x20  - Linker created -
+  .text              ro code   0x800'3da4    0x1e  cmain.o [4]
+  .text              ro code   0x800'3dc2     0x4  low_level_init.o [2]
+  .text              ro code   0x800'3dc6     0x8  exit.o [2]
+  .text              ro code   0x800'3dce     0x2  startup_stm32l031xx.o [1]
+  .text              ro code   0x800'3dd0     0xa  cexit.o [4]
+  .text              ro code   0x800'3dda     0x2  startup_stm32l031xx.o [1]
+  .text              ro code   0x800'3ddc    0x14  exit.o [5]
+  .text              ro code   0x800'3df0    0x10  startup_stm32l031xx.o [1]
+  .text              ro code   0x800'3e00     0xc  cstartup_M.o [4]
+  .text              ro code   0x800'3e0c     0x2  startup_stm32l031xx.o [1]
+  .text              ro code   0x800'3e0e     0x2  startup_stm32l031xx.o [1]
+  .text              ro code   0x800'3e10     0x2  startup_stm32l031xx.o [1]
+  .text              ro code   0x800'3e12     0x2  startup_stm32l031xx.o [1]
+  .text              ro code   0x800'3e14     0x2  startup_stm32l031xx.o [1]
+  .text              ro code   0x800'3e16     0x2  startup_stm32l031xx.o [1]
+  .text              ro code   0x800'3e18     0x2  startup_stm32l031xx.o [1]
+  .text              ro code   0x800'3e1a     0x2  startup_stm32l031xx.o [1]
+  .text              ro code   0x800'3e1c     0x2  startup_stm32l031xx.o [1]
+  .text              ro code   0x800'3e1e     0x2  startup_stm32l031xx.o [1]
+  .text              ro code   0x800'3e20     0x2  startup_stm32l031xx.o [1]
+  .text              ro code   0x800'3e22     0x2  startup_stm32l031xx.o [1]
+  .text              ro code   0x800'3e24     0x2  startup_stm32l031xx.o [1]
+  .text              ro code   0x800'3e26     0x2  startup_stm32l031xx.o [1]
+  .text              ro code   0x800'3e28     0x2  startup_stm32l031xx.o [1]
+  .text              ro code   0x800'3e2a     0x2  startup_stm32l031xx.o [1]
+  .rodata            const     0x800'3e2c     0x0  zero_init3.o [4]
+  .rodata            const     0x800'3e2c     0x0  packbits_init_single.o [4]
+  Initializer bytes  const     0x800'3e2c    0x10  <for P2-1>
+                             - 0x800'3e3c  0x1d7c
 
-"P2", part 1 of 3:                           0x48
-  P2-1                        0x2000'0000    0x48  <Init block>
-    .data            inited   0x2000'0000    0x3e  para.o [1]
-    .data            inited   0x2000'0040     0x4  system_stm32l0xx.o [1]
-    .data            inited   0x2000'0044     0x4  modbus_ascii.o [1]
-                            - 0x2000'0048    0x48
+"P2", part 1 of 3:                           0x4c
+  P2-1                        0x2000'0000    0x4c  <Init block>
+    .data            inited   0x2000'0000    0x44  para.o [1]
+    .data            inited   0x2000'0044     0x4  system_stm32l0xx.o [1]
+    .data            inited   0x2000'0048     0x4  modbus_ascii.o [1]
+                            - 0x2000'004c    0x4c
 
-"P2", part 2 of 3:                          0x29c
-  .bss               zero     0x2000'0048    0x9c  usart.o [1]
-  .bss               zero     0x2000'00e4    0x98  modbus_ascii.o [1]
-  .bss               zero     0x2000'017c    0x98  usart.o [1]
-  .bss               zero     0x2000'0214    0x64  modbus_asc.o [1]
-  .bss               zero     0x2000'0278    0x40  tim.o [1]
-  .bss               zero     0x2000'02b8    0x24  para.o [1]
-  .bss               zero     0x2000'02dc     0x4  stm32l0xx_hal.o [1]
-  .bss               zero     0x2000'02e0     0x2  usart.o [1]
-  .bss               zero     0x2000'02e2     0x1  modbus_asc.o [1]
-                            - 0x2000'02e3   0x29b
+"P2", part 2 of 3:                          0x2b0
+  .bss               zero     0x2000'004c    0x9c  usart.o [1]
+  .bss               zero     0x2000'00e8    0x98  modbus_ascii.o [1]
+  .bss               zero     0x2000'0180    0x98  usart.o [1]
+  .bss               zero     0x2000'0218    0x64  modbus_asc.o [1]
+  .bss               zero     0x2000'027c    0x44  tim.o [1]
+  .bss               zero     0x2000'02c0    0x24  para.o [1]
+  .bss               zero     0x2000'02e4    0x10  main.o [1]
+  .bss               zero     0x2000'02f4     0x4  stm32l0xx_hal.o [1]
+  .bss               zero     0x2000'02f8     0x2  usart.o [1]
+  .bss               zero     0x2000'02fa     0x1  modbus_asc.o [1]
+                            - 0x2000'02fb   0x2af
 
 "P2", part 3 of 3:                          0x800
-  CSTACK                      0x2000'02e8   0x800  <Block>
-    CSTACK           uninit   0x2000'02e8   0x800  <Block tail>
-                            - 0x2000'0ae8   0x800
+  CSTACK                      0x2000'0300   0x800  <Block>
+    CSTACK           uninit   0x2000'0300   0x800  <Block tail>
+                            - 0x2000'0b00   0x800
 
 Unused ranges:
 
          From           To    Size
          ----           --    ----
-   0x800'3d04   0x800'3fff   0x2fc
-  0x2000'02e4  0x2000'02e7     0x4
-  0x2000'0ae8  0x2000'1fff  0x1518
+   0x800'3e3c   0x800'3fff   0x1c4
+  0x2000'02fc  0x2000'02ff     0x4
+  0x2000'0b00  0x2000'1fff  0x1500
 
 
 *******************************************************************************
@@ -292,14 +195,14 @@ Unused ranges:
           Address      Size
           -------      ----
 Zero (__iar_zero_init3)
-    1 destination range, total size 0x29b:
-          0x2000'0048  0x29b
+    1 destination range, total size 0x2af:
+          0x2000'004c  0x2af
 
 Copy/packbits (__iar_packbits_init_single3)
-    1 source range, total size 0x10 (22% of destination):
-           0x800'3cf4   0x10
-    1 destination range, total size 0x48:
-          0x2000'0000   0x48
+    1 source range, total size 0x10 (21% of destination):
+           0x800'3e2c   0x10
+    1 destination range, total size 0x4c:
+          0x2000'0000   0x4c
 
 
 
@@ -313,25 +216,26 @@ command line/config:
     ---------------------------------------------------
     Total:
 
-F:\信为产品\05 - 正反转\DirectionSensor_rotation_1.2_正反转_L031(F3)  调试第4版 修改累计运行时间 20200410  V1.0.3\DirectionSensor_rotation_1.2_正反转_L031(F3)\Project\Debug\Obj: [1]
-    common.o                       46
+D:\github\wireless\direct-sensor\Z_F_Zhuan\Project\Debug\Obj: [1]
+    common.o                       30
     eeprom.o                      120
-    main.o                        668
+    main.o                        816                16
     modbus_asc.o                1 772               101
     modbus_ascii.o                644        1      156
-    para.o                        220       13       98
+    para.o                        220       14      104
     startup_stm32l031xx.o         254
-    stm32l0xx_hal.o                52                 4
+    stm32l0xx_hal.o                76                 4
     stm32l0xx_hal_cortex.o        168
     stm32l0xx_hal_flash_ex.o       52
-    stm32l0xx_hal_gpio.o          404
+    stm32l0xx_hal_gpio.o          416
+    stm32l0xx_hal_iwdg.o          104
     stm32l0xx_hal_rcc.o           524
     stm32l0xx_hal_tim.o           488
-    system_stm32l0xx.o            120        2        4
-    tim.o                         412                64
+    system_stm32l0xx.o            120        1        4
+    tim.o                         452                68
     usart.o                       808               310
     ---------------------------------------------------
-    Total:                      6 752       16      737
+    Total:                      7 064       16      763
 
 dl6M_tln.a: [2]
     exit.o                          8
@@ -363,10 +267,9 @@ shb_l.a: [5]
     ---------------------------------------------------
     Total:                         20
 
-    Gaps                                              2
     Linker created                          32    2 048
 -------------------------------------------------------
-    Grand Total:                7 380       48    2 787
+    Grand Total:                7 692       48    2 811
 
 
 *******************************************************************************
@@ -375,41 +278,46 @@ shb_l.a: [5]
 
 Entry                       Address   Size  Type      Object
 -----                       -------   ----  ----      ------
-.iar.init_table$$Base    0x800'3c4c          --   Gb  - Linker created -
-.iar.init_table$$Limit   0x800'3c6c          --   Gb  - Linker created -
-?main                    0x800'3c6d         Code  Gb  cmain.o [4]
-AHBPrescTable            0x800'3b90   0x10  Data  Gb  system_stm32l0xx.o [1]
-CSTACK$$Base            0x2000'02e8          --   Gb  - Linker created -
-CSTACK$$Limit           0x2000'0ae8          --   Gb  - Linker created -
+.iar.init_table$$Base    0x800'3d84          --   Gb  - Linker created -
+.iar.init_table$$Limit   0x800'3da4          --   Gb  - Linker created -
+?main                    0x800'3da5         Code  Gb  cmain.o [4]
+AHBPrescTable            0x800'3cc8   0x10  Data  Gb  system_stm32l0xx.o [1]
+CSTACK$$Base            0x2000'0300          --   Gb  - Linker created -
+CSTACK$$Limit           0x2000'0b00          --   Gb  - Linker created -
 Cur_Param               0x2000'0000   0x1c  Data  Gb  para.o [1]
-Current_NegativeTime    0x2000'003c    0x2  Data  Gb  para.o [1]
-Current_PositiveTime    0x2000'003a    0x2  Data  Gb  para.o [1]
-Current_pulse           0x2000'0038    0x2  Data  Gb  para.o [1]
-Delay_Ms                 0x800'27ad   0x10  Code  Gb  common.o [1]
-Eeprom_ReadNBytes        0x800'2aa7   0x24  Code  Gb  eeprom.o [1]
-Eeprom_WriteNBytes       0x800'2a61   0x46  Code  Gb  eeprom.o [1]
-GPIO_Configuration       0x800'2fb9   0x38  Code  Gb  main.o [1]
+Current_NegativeTime    0x2000'0040    0x4  Data  Gb  para.o [1]
+Current_PositiveTime    0x2000'003c    0x4  Data  Gb  para.o [1]
+Current_pulse           0x2000'0038    0x4  Data  Gb  para.o [1]
+Eeprom_ReadNBytes        0x800'2a8f   0x24  Code  Gb  eeprom.o [1]
+Eeprom_WriteNBytes       0x800'2a49   0x46  Code  Gb  eeprom.o [1]
+GPIO_Configuration       0x800'3003   0x4a  Code  Gb  main.o [1]
+HAL_Delay                0x800'27ad   0x18  Code  Wk  stm32l0xx_hal.o [1]
 HAL_FLASHEx_DATAEEPROM_Lock
-                         0x800'2ef5    0xe  Code  Gb  stm32l0xx_hal_flash_ex.o [1]
+                         0x800'2f09    0xe  Code  Gb  stm32l0xx_hal_flash_ex.o [1]
 HAL_FLASHEx_DATAEEPROM_Unlock
-                         0x800'2edd   0x18  Code  Gb  stm32l0xx_hal_flash_ex.o [1]
-HAL_GPIO_Init            0x800'345d  0x16c  Code  Gb  stm32l0xx_hal_gpio.o [1]
-HAL_GPIO_ReadPin         0x800'35c9    0xe  Code  Gb  stm32l0xx_hal_gpio.o [1]
-HAL_GetTick              0x800'386d    0xc  Code  Wk  stm32l0xx_hal.o [1]
-HAL_InitTick             0x800'3879   0x28  Code  Wk  stm32l0xx_hal.o [1]
-HAL_NVIC_EnableIRQ       0x800'3b09    0x8  Code  Gb  stm32l0xx_hal_cortex.o [1]
-HAL_NVIC_SetPriority     0x800'3b01    0x8  Code  Gb  stm32l0xx_hal_cortex.o [1]
-HAL_RCC_ClockConfig      0x800'321d  0x168  Code  Gb  stm32l0xx_hal_rcc.o [1]
+                         0x800'2ef1   0x18  Code  Gb  stm32l0xx_hal_flash_ex.o [1]
+HAL_GPIO_Init            0x800'32c5  0x16c  Code  Gb  stm32l0xx_hal_gpio.o [1]
+HAL_GPIO_ReadPin         0x800'3431    0xe  Code  Gb  stm32l0xx_hal_gpio.o [1]
+HAL_GPIO_WritePin        0x800'343f    0xc  Code  Gb  stm32l0xx_hal_gpio.o [1]
+HAL_GetTick              0x800'2ee5    0xc  Code  Wk  stm32l0xx_hal.o [1]
+HAL_IWDG_Init            0x800'36a5   0x52  Code  Gb  stm32l0xx_hal_iwdg.o [1]
+HAL_IWDG_Refresh         0x800'36f7    0xa  Code  Gb  stm32l0xx_hal_iwdg.o [1]
+HAL_InitTick             0x800'39b1   0x28  Code  Wk  stm32l0xx_hal.o [1]
+HAL_NVIC_EnableIRQ       0x800'3c41    0x8  Code  Gb  stm32l0xx_hal_cortex.o [1]
+HAL_NVIC_SetPriority     0x800'3c39    0x8  Code  Gb  stm32l0xx_hal_cortex.o [1]
+HAL_RCC_ClockConfig      0x800'3465  0x168  Code  Gb  stm32l0xx_hal_rcc.o [1]
 HAL_RCC_GetSysClockFreq
-                         0x800'3385   0x78  Code  Gb  stm32l0xx_hal_rcc.o [1]
-HAL_SYSTICK_Config       0x800'3b11    0x8  Code  Gb  stm32l0xx_hal_cortex.o [1]
-HAL_TIM_Base_Init        0x800'38a1   0x36  Code  Gb  stm32l0xx_hal_tim.o [1]
-HAL_TIM_Base_MspInit     0x800'36a3   0x28  Code  Gb  tim.o [1]
-HAL_TIM_Base_Start_IT    0x800'38d7   0x16  Code  Gb  stm32l0xx_hal_tim.o [1]
-HAL_TIM_IRQHandler       0x800'38ed  0x128  Code  Gb  stm32l0xx_hal_tim.o [1]
+                         0x800'35cd   0x78  Code  Gb  stm32l0xx_hal_rcc.o [1]
+HAL_SYSTICK_Config       0x800'3c49    0x8  Code  Gb  stm32l0xx_hal_cortex.o [1]
+HAL_TIM_Base_Init        0x800'39d9   0x36  Code  Gb  stm32l0xx_hal_tim.o [1]
+HAL_TIM_Base_MspInit     0x800'37bf   0x28  Code  Gb  tim.o [1]
+HAL_TIM_Base_Start_IT    0x800'3a0f   0x16  Code  Gb  stm32l0xx_hal_tim.o [1]
+HAL_TIM_IRQHandler       0x800'3a25  0x128  Code  Gb  stm32l0xx_hal_tim.o [1]
 HAL_TIM_PeriodElapsedCallback
-                         0x800'36d5   0x80  Code  Gb  tim.o [1]
-LPUART1_IRQHandler       0x800'2e4d   0x56  Code  Gb  usart.o [1]
+                         0x800'37f1   0xa6  Code  Gb  tim.o [1]
+IWDG_HandleStructure    0x2000'02e4   0x10  Data  Gb  main.o [1]
+LPUART1_IRQHandler       0x800'2e55   0x56  Code  Gb  usart.o [1]
+Led_Control              0x800'2f95   0x36  Code  Gb  main.o [1]
 MBASC_Fun03              0x800'2125   0xe6  Code  Gb  modbus_asc.o [1]
 MBASC_Fun04              0x800'220b   0xee  Code  Gb  modbus_asc.o [1]
 MBASC_Fun05              0x800'22fd   0x8a  Code  Gb  modbus_asc.o [1]
@@ -422,96 +330,99 @@ MBASC_SendErr            0x800'2109   0x1c  Code  Gb  modbus_asc.o [1]
 MBASC_SendMsg            0x800'20d7   0x1c  Code  Gb  modbus_asc.o [1]
 MBASC_SendMsg_NoLimit    0x800'20f3   0x16  Code  Gb  modbus_asc.o [1]
 MODBUS_ASCII_AsciiPacketToRtuPacket
-                         0x800'286f   0x2c  Code  Gb  modbus_ascii.o [1]
+                         0x800'2857   0x2c  Code  Gb  modbus_ascii.o [1]
 MODBUS_ASCII_AsciiToHex
-                         0x800'2807   0x30  Code  Gb  modbus_ascii.o [1]
+                         0x800'27ef   0x30  Code  Gb  modbus_ascii.o [1]
 MODBUS_ASCII_CheckAscii
-                         0x800'2945   0x38  Code  Gb  modbus_ascii.o [1]
-MODBUS_ASCII_GetLrc      0x800'2837   0x38  Code  Gb  modbus_ascii.o [1]
+                         0x800'292d   0x38  Code  Gb  modbus_ascii.o [1]
+MODBUS_ASCII_GetLrc      0x800'281f   0x38  Code  Gb  modbus_ascii.o [1]
 MODBUS_ASCII_HandlRevData
-                         0x800'28c7   0x7e  Code  Gb  modbus_ascii.o [1]
+                         0x800'28af   0x7e  Code  Gb  modbus_ascii.o [1]
 MODBUS_ASCII_HexToAscii
-                         0x800'27dd   0x2a  Code  Gb  modbus_ascii.o [1]
-MODBUS_ASCII_RecvData    0x800'297d   0x72  Code  Gb  modbus_ascii.o [1]
+                         0x800'27c5   0x2a  Code  Gb  modbus_ascii.o [1]
+MODBUS_ASCII_RecvData    0x800'2965   0x72  Code  Gb  modbus_ascii.o [1]
 MODBUS_ASCII_RtuPacketToAsciiPacket
-                         0x800'289b   0x2c  Code  Gb  modbus_ascii.o [1]
-MODBUS_ASCII_SendData    0x800'29ef   0x60  Code  Gb  modbus_ascii.o [1]
-PLLMulTable              0x800'3ba0    0xc  Data  Gb  system_stm32l0xx.o [1]
-PulseFlag               0x2000'0278    0x1  Data  Gb  tim.o [1]
-ReadPara                 0x800'2ad9   0xd2  Code  Gb  para.o [1]
-Region$$Table$$Base      0x800'3c4c          --   Gb  - Linker created -
-Region$$Table$$Limit     0x800'3c6c          --   Gb  - Linker created -
-SendBuf                 0x2000'0214   0x64  Data  Gb  modbus_asc.o [1]
-SendLen                 0x2000'02e2    0x1  Data  Gb  modbus_asc.o [1]
+                         0x800'2883   0x2c  Code  Gb  modbus_ascii.o [1]
+MODBUS_ASCII_SendData    0x800'29d7   0x60  Code  Gb  modbus_ascii.o [1]
+PLLMulTable              0x800'3cd8    0xc  Data  Gb  system_stm32l0xx.o [1]
+PulseFlag               0x2000'027c    0x1  Data  Gb  tim.o [1]
+ReadPara                 0x800'2ac1   0xd2  Code  Gb  para.o [1]
+Region$$Table$$Base      0x800'3d84          --   Gb  - Linker created -
+Region$$Table$$Limit     0x800'3da4          --   Gb  - Linker created -
+SendBuf                 0x2000'0218   0x64  Data  Gb  modbus_asc.o [1]
+SendLen                 0x2000'02fa    0x1  Data  Gb  modbus_asc.o [1]
 SensorSoftVersion        0x800'27a4    0x8  Data  Gb  modbus_asc.o [1]
-SysTick_Config           0x800'3ad7   0x2a  Code  Lc  stm32l0xx_hal_cortex.o [1]
-SystemClock_Config       0x800'2f81   0x38  Code  Lc  main.o [1]
-SystemCoreClock         0x2000'0040    0x4  Data  Gb  system_stm32l0xx.o [1]
-SystemInit               0x800'3b35   0x3e  Code  Gb  system_stm32l0xx.o [1]
-TIM21_ETR_Init           0x800'35f1   0x8a  Code  Gb  tim.o [1]
-TIM22_Handler           0x2000'0280   0x38  Data  Gb  tim.o [1]
-TIM22_IRQHandler         0x800'36cb    0xa  Code  Gb  tim.o [1]
-TIM22_Init               0x800'367b   0x28  Code  Gb  tim.o [1]
-TIM_Base_SetConfig       0x800'3a15   0x5e  Code  Lc  stm32l0xx_hal_tim.o [1]
-Time_1min_flag          0x2000'027b    0x1  Data  Gb  tim.o [1]
-Time_1s_flag            0x2000'0279    0x1  Data  Gb  tim.o [1]
-Time_5s_flag            0x2000'027a    0x1  Data  Gb  tim.o [1]
-UART1_RXBuff            0x2000'004c   0x98  Data  Gb  usart.o [1]
-UART1_RXBuffLen         0x2000'0048    0x1  Data  Gb  usart.o [1]
-UART1_SendData           0x800'2dd9   0x50  Code  Gb  usart.o [1]
-UART1_TXBuff            0x2000'017c   0x98  Data  Gb  usart.o [1]
-UartRecvFrameOK         0x2000'0049    0x1  Data  Gb  usart.o [1]
-Uart_Config_Init         0x800'2c19  0x1c0  Code  Gb  usart.o [1]
-Usart_Gpio_Init          0x800'2bb5   0x62  Code  Gb  usart.o [1]
-UserPara                0x2000'02b8   0x24  Data  Gb  para.o [1]
+SysTick_Config           0x800'3c0f   0x2a  Code  Lc  stm32l0xx_hal_cortex.o [1]
+SystemClock_Config       0x800'2fcb   0x38  Code  Lc  main.o [1]
+SystemCoreClock         0x2000'0044    0x4  Data  Gb  system_stm32l0xx.o [1]
+SystemInit               0x800'3c6d   0x3e  Code  Gb  system_stm32l0xx.o [1]
+TIM21_ETR_Init           0x800'370d   0x8a  Code  Gb  tim.o [1]
+TIM22_Handler           0x2000'0288   0x38  Data  Gb  tim.o [1]
+TIM22_IRQHandler         0x800'37e7    0xa  Code  Gb  tim.o [1]
+TIM22_Init               0x800'3797   0x28  Code  Gb  tim.o [1]
+TIM_Base_SetConfig       0x800'3b4d   0x5e  Code  Lc  stm32l0xx_hal_tim.o [1]
+Time_1min_flag          0x2000'027f    0x1  Data  Gb  tim.o [1]
+Time_1s_flag            0x2000'027d    0x1  Data  Gb  tim.o [1]
+Time_5s_flag            0x2000'027e    0x1  Data  Gb  tim.o [1]
+UART1_RXBuff            0x2000'0050   0x98  Data  Gb  usart.o [1]
+UART1_RXBuffLen         0x2000'004c    0x1  Data  Gb  usart.o [1]
+UART1_SendData           0x800'2de1   0x50  Code  Gb  usart.o [1]
+UART1_TXBuff            0x2000'0180   0x98  Data  Gb  usart.o [1]
+UartRecvFrameOK         0x2000'004d    0x1  Data  Gb  usart.o [1]
+Uart_Config_Init         0x800'2c21  0x1c0  Code  Gb  usart.o [1]
+Usart_Gpio_Init          0x800'2bbd   0x62  Code  Gb  usart.o [1]
+UserPara                0x2000'02c0   0x24  Data  Gb  para.o [1]
 User_Default_Param      0x2000'001c   0x1c  Data  Gb  para.o [1]
-__NVIC_EnableIRQ         0x800'3a81   0x12  Code  Lc  stm32l0xx_hal_cortex.o [1]
-__NVIC_SetPriority       0x800'3a93   0x44  Code  Lc  stm32l0xx_hal_cortex.o [1]
+User_Iwdg_Feed           0x800'3067    0xa  Code  Gb  main.o [1]
+User_Iwdg_Init           0x800'304d   0x1a  Code  Gb  main.o [1]
+__NVIC_EnableIRQ         0x800'3bb9   0x12  Code  Lc  stm32l0xx_hal_cortex.o [1]
+__NVIC_SetPriority       0x800'3bcb   0x44  Code  Lc  stm32l0xx_hal_cortex.o [1]
 __NVIC_SystemReset       0x800'20c1   0x12  Code  Lc  modbus_asc.o [1]
-__aeabi_idiv             0x800'37b9         Code  Gb  I32DivModFast.o [4]
-__aeabi_idiv0            0x800'3b29         Code  Gb  IntDivZer.o [4]
-__aeabi_idivmod          0x800'37b9         Code  Gb  I32DivModFast.o [4]
-__aeabi_ldiv0            0x800'2f7d         Code  Gb  I64DivZer.o [4]
-__aeabi_memclr4          0x800'3429         Code  Gb  ABImemset.o [4]
-__aeabi_memclr8          0x800'3429         Code  Gb  ABImemset.o [4]
-__aeabi_uidiv            0x800'37bf         Code  Gb  I32DivModFast.o [4]
-__aeabi_uidivmod         0x800'37bf         Code  Gb  I32DivModFast.o [4]
-__aeabi_uldivmod         0x800'2f11         Code  Gb  I64DivMod.o [4]
-__cmain                  0x800'3c6d         Code  Gb  cmain.o [4]
-__exit                   0x800'3ca5   0x14  Code  Gb  exit.o [5]
-__iar_Memset4_word       0x800'342d         Code  Gb  ABImemset.o [4]
-__iar_data_init3         0x800'3c25   0x28  Code  Gb  data_init.o [4]
+__aeabi_idiv             0x800'38fd         Code  Gb  I32DivModFast.o [4]
+__aeabi_idiv0            0x800'3c61         Code  Gb  IntDivZer.o [4]
+__aeabi_idivmod          0x800'38fd         Code  Gb  I32DivModFast.o [4]
+__aeabi_ldiv0            0x800'2f91         Code  Gb  I64DivZer.o [4]
+__aeabi_memclr4          0x800'3671         Code  Gb  ABImemset.o [4]
+__aeabi_memclr8          0x800'3671         Code  Gb  ABImemset.o [4]
+__aeabi_uidiv            0x800'3903         Code  Gb  I32DivModFast.o [4]
+__aeabi_uidivmod         0x800'3903         Code  Gb  I32DivModFast.o [4]
+__aeabi_uldivmod         0x800'2f25         Code  Gb  I64DivMod.o [4]
+__cmain                  0x800'3da5         Code  Gb  cmain.o [4]
+__exit                   0x800'3ddd   0x14  Code  Gb  exit.o [5]
+__iar_Memset4_word       0x800'3675         Code  Gb  ABImemset.o [4]
+__iar_data_init3         0x800'3d5d   0x28  Code  Gb  data_init.o [4]
 __iar_packbits_init_single3
-                         0x800'3be9   0x3c  Code  Gb  packbits_init_single.o [4]
-__iar_program_start      0x800'3cc9         Code  Gb  cstartup_M.o [4]
-__iar_zero_init3         0x800'3bad   0x3c  Code  Gb  zero_init3.o [4]
-__low_level_init         0x800'3c8b    0x4  Code  Gb  low_level_init.o [2]
+                         0x800'3d21   0x3c  Code  Gb  packbits_init_single.o [4]
+__iar_program_start      0x800'3e01         Code  Gb  cstartup_M.o [4]
+__iar_zero_init3         0x800'3ce5   0x3c  Code  Gb  zero_init3.o [4]
+__low_level_init         0x800'3dc3    0x4  Code  Gb  low_level_init.o [2]
 __vector_table           0x800'2000         Data  Gb  startup_stm32l031xx.o [1]
-_call_main               0x800'3c79         Code  Gb  cmain.o [4]
-_exit                    0x800'3c99         Code  Gb  cexit.o [4]
-_main                    0x800'3c87         Code  Gb  cmain.o [4]
-cyAsciiBuff             0x2000'00e4   0x98  Data  Gb  modbus_ascii.o [1]
-exit                     0x800'3c8f    0x8  Code  Gb  exit.o [2]
-g_cyRevBufffLen         0x2000'0046    0x2  Data  Lc  modbus_ascii.o [1]
-g_cyRevState            0x2000'0044    0x1  Data  Lc  modbus_ascii.o [1]
-long32Array              0x800'27bd   0x1e  Code  Gb  common.o [1]
-main                     0x800'2ff1  0x1fa  Code  Gb  main.o [1]
-tim_1min_cnt            0x2000'027e    0x2  Data  Gb  tim.o [1]
-tim_cnt                 0x2000'027c    0x2  Data  Gb  tim.o [1]
-u8SendIndex             0x2000'02e1    0x1  Data  Gb  usart.o [1]
-u8SendNum               0x2000'02e0    0x1  Data  Gb  usart.o [1]
-uwTick                  0x2000'02dc    0x4  Data  Gb  stm32l0xx_hal.o [1]
+_call_main               0x800'3db1         Code  Gb  cmain.o [4]
+_exit                    0x800'3dd1         Code  Gb  cexit.o [4]
+_main                    0x800'3dbf         Code  Gb  cmain.o [4]
+cyAsciiBuff             0x2000'00e8   0x98  Data  Gb  modbus_ascii.o [1]
+exit                     0x800'3dc7    0x8  Code  Gb  exit.o [2]
+first_20s               0x2000'0280    0x1  Data  Gb  tim.o [1]
+g_cyRevBufffLen         0x2000'004a    0x2  Data  Lc  modbus_ascii.o [1]
+g_cyRevState            0x2000'0048    0x1  Data  Lc  modbus_ascii.o [1]
+long32Array              0x800'2b9d   0x1e  Code  Gb  common.o [1]
+main                     0x800'3071  0x21c  Code  Gb  main.o [1]
+tim_1min_cnt            0x2000'0284    0x2  Data  Gb  tim.o [1]
+tim_cnt                 0x2000'0282    0x2  Data  Gb  tim.o [1]
+u8SendIndex             0x2000'02f9    0x1  Data  Gb  usart.o [1]
+u8SendNum               0x2000'02f8    0x1  Data  Gb  usart.o [1]
+uwTick                  0x2000'02f4    0x4  Data  Gb  stm32l0xx_hal.o [1]
 
 
-[1] = F:\信为产品\05 - 正反转\DirectionSensor_rotation_1.2_正反转_L031(F3)  调试第4版 修改累计运行时间 20200410  V1.0.3\DirectionSensor_rotation_1.2_正反转_L031(F3)\Project\Debug\Obj
+[1] = D:\github\wireless\direct-sensor\Z_F_Zhuan\Project\Debug\Obj
 [2] = dl6M_tln.a
 [3] = m6M_tl.a
 [4] = rt6M_tl.a
 [5] = shb_l.a
 
-  7 380 bytes of readonly  code memory
+  7 692 bytes of readonly  code memory
      48 bytes of readonly  data memory
-  2 787 bytes of readwrite data memory
+  2 811 bytes of readwrite data memory
 
 Errors: none
 Warnings: none

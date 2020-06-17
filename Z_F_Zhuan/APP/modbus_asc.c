@@ -56,7 +56,8 @@ void MBASC_SendMsg(uint8_t *u8Msg, uint8_t u8MsgLen)
 {
     if(MB_ADDRESS_BROADCAST != u8Msg[0])
     {
-      Delay_Ms(50);
+//        Delay_Ms(50);
+        HAL_Delay(50);
         MODBUS_ASCII_SendData(u8Msg, u8MsgLen);
     }
 }
@@ -74,7 +75,8 @@ void MBASC_SendMsg(uint8_t *u8Msg, uint8_t u8MsgLen)
 //******************************************************************************
 void MBASC_SendMsg_NoLimit(uint8_t *u8Msg, uint8_t u8MsgLen)
 {
-   Delay_Ms(50);
+//    Delay_Ms(50);
+    HAL_Delay(50);
     MODBUS_ASCII_SendData(u8Msg, u8MsgLen);
 }
 

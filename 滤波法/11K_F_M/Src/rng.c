@@ -19,6 +19,7 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "rng.h"
+#include "math.h"
 
 /* USER CODE BEGIN 0 */
 

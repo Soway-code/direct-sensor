@@ -2372,103 +2372,106 @@
     <group>
         <name>APP</name>
         <file>
-            <name>$PROJ_DIR$\..\Source\APP\common.c</name>
+            <name>$PROJ_DIR$\..\APP\common.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\Source\APP\main.c</name>
+            <name>$PROJ_DIR$\..\APP\main.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\Source\APP\modbus_asc.c</name>
+            <name>$PROJ_DIR$\..\APP\modbus_asc.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\Source\APP\modbus_ascii.c</name>
+            <name>$PROJ_DIR$\..\APP\modbus_ascii.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\Source\APP\para.c</name>
+            <name>$PROJ_DIR$\..\APP\para.c</name>
         </file>
     </group>
     <group>
         <name>BSP</name>
         <file>
-            <name>$PROJ_DIR$\..\Source\BSP\adc.c</name>
+            <name>$PROJ_DIR$\..\BSP\adc.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\Source\BSP\eeprom.c</name>
+            <name>$PROJ_DIR$\..\BSP\eeprom.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\Source\BSP\tim.c</name>
+            <name>$PROJ_DIR$\..\BSP\FlashIf.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\Source\BSP\usart.c</name>
+            <name>$PROJ_DIR$\..\BSP\tim.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\..\BSP\usart.c</name>
         </file>
     </group>
     <group>
         <name>CMSIS</name>
         <file>
-            <name>$PROJ_DIR$\..\Source\CMSIS\startup_stm32l031xx.s</name>
+            <name>$PROJ_DIR$\..\CMSIS\startup_stm32l031xx.s</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\Source\CMSIS\system_stm32l0xx.c</name>
+            <name>$PROJ_DIR$\..\CMSIS\system_stm32l0xx.c</name>
         </file>
     </group>
     <group>
         <name>FWLib</name>
         <file>
-            <name>$PROJ_DIR$\..\Source\FWLib\src\stm32l0xx_hal.c</name>
+            <name>$PROJ_DIR$\..\FWLib\src\stm32l0xx_hal.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\Source\FWLib\src\stm32l0xx_hal_adc.c</name>
+            <name>$PROJ_DIR$\..\FWLib\src\stm32l0xx_hal_adc.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\Source\FWLib\src\stm32l0xx_hal_adc_ex.c</name>
+            <name>$PROJ_DIR$\..\FWLib\src\stm32l0xx_hal_adc_ex.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\Source\FWLib\src\stm32l0xx_hal_comp.c</name>
+            <name>$PROJ_DIR$\..\FWLib\src\stm32l0xx_hal_comp.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\Source\FWLib\src\stm32l0xx_hal_comp_ex.c</name>
+            <name>$PROJ_DIR$\..\FWLib\src\stm32l0xx_hal_comp_ex.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\Source\FWLib\src\stm32l0xx_hal_cortex.c</name>
+            <name>$PROJ_DIR$\..\FWLib\src\stm32l0xx_hal_cortex.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\Source\FWLib\src\stm32l0xx_hal_dma.c</name>
+            <name>$PROJ_DIR$\..\FWLib\src\stm32l0xx_hal_dma.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\Source\FWLib\src\stm32l0xx_hal_flash.c</name>
+            <name>$PROJ_DIR$\..\FWLib\src\stm32l0xx_hal_flash.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\Source\FWLib\src\stm32l0xx_hal_flash_ex.c</name>
+            <name>$PROJ_DIR$\..\FWLib\src\stm32l0xx_hal_flash_ex.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\Source\FWLib\src\stm32l0xx_hal_flash_ramfunc.c</name>
+            <name>$PROJ_DIR$\..\FWLib\src\stm32l0xx_hal_flash_ramfunc.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\Source\FWLib\src\stm32l0xx_hal_gpio.c</name>
+            <name>$PROJ_DIR$\..\FWLib\src\stm32l0xx_hal_gpio.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\Source\FWLib\src\stm32l0xx_hal_iwdg.c</name>
+            <name>$PROJ_DIR$\..\FWLib\src\stm32l0xx_hal_iwdg.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\Source\FWLib\src\stm32l0xx_hal_rcc.c</name>
+            <name>$PROJ_DIR$\..\FWLib\src\stm32l0xx_hal_rcc.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\Source\FWLib\src\stm32l0xx_hal_rcc_ex.c</name>
+            <name>$PROJ_DIR$\..\FWLib\src\stm32l0xx_hal_rcc_ex.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\Source\FWLib\src\stm32l0xx_hal_tim.c</name>
+            <name>$PROJ_DIR$\..\FWLib\src\stm32l0xx_hal_tim.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\Source\FWLib\src\stm32l0xx_hal_tim_ex.c</name>
+            <name>$PROJ_DIR$\..\FWLib\src\stm32l0xx_hal_tim_ex.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\Source\FWLib\src\stm32l0xx_hal_uart.c</name>
+            <name>$PROJ_DIR$\..\FWLib\src\stm32l0xx_hal_uart.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\Source\FWLib\src\stm32l0xx_hal_uart_ex.c</name>
+            <name>$PROJ_DIR$\..\FWLib\src\stm32l0xx_hal_uart_ex.c</name>
         </file>
         <file>
-            <name>$PROJ_DIR$\..\Source\FWLib\src\stm32l0xx_hal_usart.c</name>
+            <name>$PROJ_DIR$\..\FWLib\src\stm32l0xx_hal_usart.c</name>
         </file>
     </group>
 </project>

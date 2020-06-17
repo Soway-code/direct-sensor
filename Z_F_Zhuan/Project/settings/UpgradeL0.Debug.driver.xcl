@@ -6,7 +6,7 @@
 
 "-p" 
 
-"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\CONFIG\debugger\ST\STM32L031F4.ddf" 
+"D:\Program Files\IAR\arm\CONFIG\debugger\ST\STM32L031F4.ddf" 
 
 "--drv_verify_download" 
 
