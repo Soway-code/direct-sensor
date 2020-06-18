@@ -1,0 +1,357 @@
+###############################################################################
+#
+# IAR ELF Linker V7.40.1.8447/W32 for ARM                 21/Apr/2018  15:11:18
+# Copyright 2007-2015 IAR Systems AB.
+#
+#    Output file  =  
+#        E:\工作工程\温湿度\L031传感器\L031工时传感器(AD检测)\Project\Debug\Exe\WorkTimeL031.out
+#    Map file     =  
+#        E:\工作工程\温湿度\L031传感器\L031工时传感器(AD检测)\Project\Debug\List\WorkTimeL031.map
+#    Command line =  
+#        "E:\工作工程\温湿度\L031传感器\L031工时传感器(AD检测)\Project\Debug\Obj\adc.o"
+#        "E:\工作工程\温湿度\L031传感器\L031工时传感器(AD检测)\Project\Debug\Obj\eeprom.o"
+#        "E:\工作工程\温湿度\L031传感器\L031工时传感器(AD检测)\Project\Debug\Obj\main.o"
+#        "E:\工作工程\温湿度\L031传感器\L031工时传感器(AD检测)\Project\Debug\Obj\modbus_asc.o"
+#        "E:\工作工程\温湿度\L031传感器\L031工时传感器(AD检测)\Project\Debug\Obj\modbus_ascii.o"
+#        "E:\工作工程\温湿度\L031传感器\L031工时传感器(AD检测)\Project\Debug\Obj\para.o"
+#        "E:\工作工程\温湿度\L031传感器\L031工时传感器(AD检测)\Project\Debug\Obj\startup_stm32l031xx.o"
+#        "E:\工作工程\温湿度\L031传感器\L031工时传感器(AD检测)\Project\Debug\Obj\stm32l0xx_hal.o"
+#        "E:\工作工程\温湿度\L031传感器\L031工时传感器(AD检测)\Project\Debug\Obj\stm32l0xx_hal_adc.o"
+#        "E:\工作工程\温湿度\L031传感器\L031工时传感器(AD检测)\Project\Debug\Obj\stm32l0xx_hal_adc_ex.o"
+#        "E:\工作工程\温湿度\L031传感器\L031工时传感器(AD检测)\Project\Debug\Obj\stm32l0xx_hal_comp.o"
+#        "E:\工作工程\温湿度\L031传感器\L031工时传感器(AD检测)\Project\Debug\Obj\stm32l0xx_hal_comp_ex.o"
+#        "E:\工作工程\温湿度\L031传感器\L031工时传感器(AD检测)\Project\Debug\Obj\stm32l0xx_hal_cortex.o"
+#        "E:\工作工程\温湿度\L031传感器\L031工时传感器(AD检测)\Project\Debug\Obj\stm32l0xx_hal_dma.o"
+#        "E:\工作工程\温湿度\L031传感器\L031工时传感器(AD检测)\Project\Debug\Obj\stm32l0xx_hal_flash.o"
+#        "E:\工作工程\温湿度\L031传感器\L031工时传感器(AD检测)\Project\Debug\Obj\stm32l0xx_hal_flash_ex.o"
+#        "E:\工作工程\温湿度\L031传感器\L031工时传感器(AD检测)\Project\Debug\Obj\stm32l0xx_hal_flash_ramfunc.o"
+#        "E:\工作工程\温湿度\L031传感器\L031工时传感器(AD检测)\Project\Debug\Obj\stm32l0xx_hal_gpio.o"
+#        "E:\工作工程\温湿度\L031传感器\L031工时传感器(AD检测)\Project\Debug\Obj\stm32l0xx_hal_iwdg.o"
+#        "E:\工作工程\温湿度\L031传感器\L031工时传感器(AD检测)\Project\Debug\Obj\stm32l0xx_hal_rcc.o"
+#        "E:\工作工程\温湿度\L031传感器\L031工时传感器(AD检测)\Project\Debug\Obj\stm32l0xx_hal_rcc_ex.o"
+#        "E:\工作工程\温湿度\L031传感器\L031工时传感器(AD检测)\Project\Debug\Obj\stm32l0xx_hal_uart.o"
+#        "E:\工作工程\温湿度\L031传感器\L031工时传感器(AD检测)\Project\Debug\Obj\stm32l0xx_hal_uart_ex.o"
+#        "E:\工作工程\温湿度\L031传感器\L031工时传感器(AD检测)\Project\Debug\Obj\stm32l0xx_hal_usart.o"
+#        "E:\工作工程\温湿度\L031传感器\L031工时传感器(AD检测)\Project\Debug\Obj\system_stm32l0xx.o"
+#        "E:\工作工程\温湿度\L031传感器\L031工时传感器(AD检测)\Project\Debug\Obj\usart.o"
+#        -o
+#        "E:\工作工程\温湿度\L031传感器\L031工时传感器(AD检测)\Project\Debug\Exe\WorkTimeL031.out"
+#        --map
+#        "E:\工作工程\温湿度\L031传感器\L031工时传感器(AD检测)\Project\Debug\List\WorkTimeL031.map"
+#        --config
+#        "E:\工作工程\温湿度\L031传感器\L031工时传感器(AD检测)\Project\stm32l031xx_flash.icf"
+#        --semihosting --entry __iar_program_start --vfe
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A1":  place at 0x08002000 { ro section .intvec };
+"P1":  place in [from 0x08002000 to 0x08003fff] { ro };
+"P2":  place in [from 0x20000000 to 0x20001fff] { rw, block CSTACK, block HEAP };
+
+  Section            Kind        Address    Size  Object
+  -------            ----        -------    ----  ------
+"A1":                                       0xc0
+  .intvec            ro code  0x08002000    0xc0  startup_stm32l031xx.o [1]
+                            - 0x080020c0    0xc0
+
+"P1":                                     0x1ae8
+  .text              ro code  0x080020c0   0x820  modbus_asc.o [1]
+  .text              ro code  0x080028e0   0x388  modbus_ascii.o [1]
+  .text              ro code  0x08002c68    0xe0  I32DivModFast.o [5]
+  .text              ro code  0x08002d48    0x80  eeprom.o [1]
+  .text              ro code  0x08002dc8   0x2e4  usart.o [1]
+  .text              ro code  0x080030ac     0x2  IntDivZer.o [5]
+  .text              ro code  0x080030ae    0x2a  zero_init3.o [5]
+  .text              ro code  0x080030d8    0x40  stm32l0xx_hal_flash_ex.o [1]
+  .text              ro code  0x08003118    0x32  I64Mul.o [5]
+  .text              ro code  0x0800314a    0x6a  I64DivMod.o [5]
+  .text              ro code  0x080031b4     0x2  I64DivZer.o [5]
+  .text              ro code  0x080031b6     0x2  startup_stm32l031xx.o [1]
+  .text              ro code  0x080031b8   0x27c  stm32l0xx_hal_rcc.o [1]
+  .text              ro code  0x08003434    0x40  stm32l0xx_hal.o [1]
+  .text              ro code  0x08003474    0xdc  stm32l0xx_hal_cortex.o [1]
+  .text              ro code  0x08003550   0x1c8  main.o [1]
+  .text              ro code  0x08003718    0x74  stm32l0xx_hal_iwdg.o [1]
+  .text              ro code  0x0800378c   0x108  para.o [1]
+  .text              ro code  0x08003894   0x154  adc.o [1]
+  .text              ro code  0x080039e8    0x80  system_stm32l0xx.o [1]
+  .text              ro code  0x08003a68    0x30  copy_init3.o [5]
+  .text              ro code  0x08003a98    0x28  data_init.o [5]
+  .iar.init_table    const    0x08003ac0    0x24  - Linker created -
+  .text              ro code  0x08003ae4    0x1a  cmain.o [5]
+  .text              ro code  0x08003afe     0x4  low_level_init.o [3]
+  .text              ro code  0x08003b02     0x8  exit.o [3]
+  .text              ro code  0x08003b0a     0x2  startup_stm32l031xx.o [1]
+  .text              ro code  0x08003b0c     0xa  cexit.o [5]
+  .text              ro code  0x08003b16     0x2  startup_stm32l031xx.o [1]
+  .text              ro code  0x08003b18    0x14  exit.o [6]
+  .rodata            const    0x08003b2c    0x10  system_stm32l0xx.o [1]
+  .text              ro code  0x08003b3c    0x10  startup_stm32l031xx.o [1]
+  .rodata            const    0x08003b4c     0xc  system_stm32l0xx.o [1]
+  .text              ro code  0x08003b58     0xc  cstartup_M.o [5]
+  .text              ro code  0x08003b64     0x2  startup_stm32l031xx.o [1]
+  .text              ro code  0x08003b66     0x2  startup_stm32l031xx.o [1]
+  .text              ro code  0x08003b68     0x2  startup_stm32l031xx.o [1]
+  .text              ro code  0x08003b6a     0x2  startup_stm32l031xx.o [1]
+  .text              ro code  0x08003b6c     0x2  startup_stm32l031xx.o [1]
+  .text              ro code  0x08003b6e     0x2  startup_stm32l031xx.o [1]
+  .text              ro code  0x08003b70     0x2  startup_stm32l031xx.o [1]
+  .text              ro code  0x08003b72     0x2  startup_stm32l031xx.o [1]
+  .text              ro code  0x08003b74     0x2  startup_stm32l031xx.o [1]
+  .text              ro code  0x08003b76     0x2  startup_stm32l031xx.o [1]
+  .text              ro code  0x08003b78     0x2  startup_stm32l031xx.o [1]
+  .text              ro code  0x08003b7a     0x2  startup_stm32l031xx.o [1]
+  .text              ro code  0x08003b7c     0x2  startup_stm32l031xx.o [1]
+  .text              ro code  0x08003b7e     0x2  startup_stm32l031xx.o [1]
+  .text              ro code  0x08003b80     0x2  startup_stm32l031xx.o [1]
+  .text              ro code  0x08003b82     0x2  startup_stm32l031xx.o [1]
+  .text              ro code  0x08003b84     0x2  startup_stm32l031xx.o [1]
+  .text              ro code  0x08003b86     0x2  startup_stm32l031xx.o [1]
+  .text              ro code  0x08003b88     0x2  startup_stm32l031xx.o [1]
+  .text              ro code  0x08003b8a     0x2  startup_stm32l031xx.o [1]
+  .rodata            const    0x08003b8c     0x0  zero_init3.o [5]
+  .rodata            const    0x08003b8c     0x0  copy_init3.o [5]
+  Initializer bytes  const    0x08003b8c    0x1c  <for P2 s0>
+                            - 0x08003ba8  0x1ae8
+
+"P2":                                      0xd18
+  P2 s0                       0x20000000    0x1c  <Init block>
+    .data            inited   0x20000000    0x14  para.o [1]
+    .data            inited   0x20000014     0x4  system_stm32l0xx.o [1]
+    .data            inited   0x20000018     0x1  modbus_ascii.o [1]
+  .bss               zero     0x2000001c   0x258  modbus_ascii.o [1]
+  .bss               zero     0x20000274    0xc8  modbus_asc.o [1]
+  .bss               zero     0x2000033c    0xc8  usart.o [1]
+  .bss               zero     0x20000404    0xc8  usart.o [1]
+  .bss               zero     0x200004cc    0x1c  para.o [1]
+  .bss               zero     0x200004e8    0x14  para.o [1]
+  .bss               zero     0x200004fc    0x10  main.o [1]
+  .bss               zero     0x2000050c     0x4  stm32l0xx_hal.o [1]
+  .bss               zero     0x20000510     0x2  main.o [1]
+  .bss               zero     0x20000512     0x2  modbus_ascii.o [1]
+  .bss               zero     0x20000514     0x1  modbus_asc.o [1]
+  .bss               zero     0x20000515     0x1  usart.o [1]
+  .bss               zero     0x20000516     0x1  usart.o [1]
+  .bss               zero     0x20000517     0x1  usart.o [1]
+  CSTACK                      0x20000518   0x800  <Block>
+    CSTACK           uninit   0x20000518   0x800  <Block tail>
+                            - 0x20000d18   0xd18
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address     Size
+          -------     ----
+Zero (__iar_zero_init3)
+    1 destination range, total size 0x4fc:
+          0x2000001c  0x4fc
+
+Copy (__iar_copy_init3)
+    1 source range, total size 0x1c (112% of destination):
+          0x08003b8c   0x1c
+    1 destination range, total size 0x19:
+          0x20000000   0x19
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                    ro code  ro data  rw data
+    ------                    -------  -------  -------
+E:\工作工程\温湿度\L031传感器\L031工时传感器(AD检测)\Project\Debug\Obj: [1]
+    adc.o                         340
+    eeprom.o                      128
+    main.o                        456                18
+    modbus_asc.o                2 080               201
+    modbus_ascii.o                904        1      603
+    para.o                        264       20       68
+    startup_stm32l031xx.o         254
+    stm32l0xx_hal.o                64                 4
+    stm32l0xx_hal_cortex.o        220
+    stm32l0xx_hal_flash_ex.o       64
+    stm32l0xx_hal_iwdg.o          116
+    stm32l0xx_hal_rcc.o           636
+    system_stm32l0xx.o            128       32        4
+    usart.o                       740               403
+    ---------------------------------------------------
+    Total:                      6 394       53    1 301
+
+command line: [2]
+    ---------------------------------------------------
+    Total:
+
+dl6M_tln.a: [3]
+    exit.o                          8
+    low_level_init.o                4
+    ---------------------------------------------------
+    Total:                         12
+
+m6M_tl.a: [4]
+    ---------------------------------------------------
+    Total:
+
+rt6M_tl.a: [5]
+    I32DivModFast.o               224
+    I64DivMod.o                   106
+    I64DivZer.o                     2
+    I64Mul.o                       50
+    IntDivZer.o                     2
+    cexit.o                        10
+    cmain.o                        26
+    copy_init3.o                   48
+    cstartup_M.o                   12
+    data_init.o                    40
+    zero_init3.o                   42
+    ---------------------------------------------------
+    Total:                        562
+
+shb_l.a: [6]
+    exit.o                         20
+    ---------------------------------------------------
+    Total:                         20
+
+    Linker created                          39    2 048
+-------------------------------------------------------
+    Grand Total:                6 988       92    3 349
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                      Address   Size  Type      Object
+-----                      -------   ----  ----      ------
+.iar.init_table$$Base   0x08003ac0          --   Gb  - Linker created -
+.iar.init_table$$Limit  0x08003ae4          --   Gb  - Linker created -
+?main                   0x08003ae5         Code  Gb  cmain.o [5]
+ADC_Value               0x20000510    0x2  Data  Gb  main.o [1]
+AHBPrescTable           0x08003b2c   0x10  Data  Gb  system_stm32l0xx.o [1]
+Adc_Init                0x08003895  0x102  Code  Gb  adc.o [1]
+CSTACK$$Base            0x20000518          --   Gb  - Linker created -
+CSTACK$$Limit           0x20000d18          --   Gb  - Linker created -
+Cur_Param               0x200004e8   0x14  Data  Gb  para.o [1]
+Disable_Lpuart1         0x08002fa1   0x26  Code  Gb  usart.o [1]
+Eeprom_ReadNBytes       0x08002d91   0x2c  Code  Gb  eeprom.o [1]
+Eeprom_WriteNBytes      0x08002d49   0x48  Code  Gb  eeprom.o [1]
+Enable_Lpuart1          0x08002f7b   0x26  Code  Gb  usart.o [1]
+Get_Adc_Vol             0x08003997   0x1e  Code  Gb  adc.o [1]
+HAL_FLASHEx_DATAEEPROM_Lock
+                        0x080030f7   0x10  Code  Gb  stm32l0xx_hal_flash_ex.o [1]
+HAL_FLASHEx_DATAEEPROM_Unlock
+                        0x080030d9   0x1e  Code  Gb  stm32l0xx_hal_flash_ex.o [1]
+HAL_GetTick             0x08003465    0x6  Code  Wk  stm32l0xx_hal.o [1]
+HAL_IWDG_Init           0x08003719   0x5c  Code  Gb  stm32l0xx_hal_iwdg.o [1]
+HAL_IWDG_Refresh        0x08003775    0xa  Code  Gb  stm32l0xx_hal_iwdg.o [1]
+HAL_IncTick             0x08003459    0xc  Code  Wk  stm32l0xx_hal.o [1]
+HAL_InitTick            0x08003435   0x24  Code  Wk  stm32l0xx_hal.o [1]
+HAL_NVIC_SetPriority    0x0800352b    0xa  Code  Gb  stm32l0xx_hal_cortex.o [1]
+HAL_RCC_ClockConfig     0x080031b9  0x1aa  Code  Gb  stm32l0xx_hal_rcc.o [1]
+HAL_RCC_GetSysClockFreq
+                        0x08003371   0x92  Code  Gb  stm32l0xx_hal_rcc.o [1]
+HAL_SYSTICK_Config      0x08003535    0x8  Code  Gb  stm32l0xx_hal_cortex.o [1]
+IWDG_HandleStructure    0x200004fc   0x10  Data  Gb  main.o [1]
+LPUART1_IRQHandler      0x08002fe1   0x66  Code  Gb  usart.o [1]
+MBASC_Fun03             0x08002135  0x1ce  Code  Gb  modbus_asc.o [1]
+MBASC_Fun04             0x0800231d  0x142  Code  Gb  modbus_asc.o [1]
+MBASC_Fun10             0x08002471  0x272  Code  Gb  modbus_asc.o [1]
+MBASC_Fun41             0x080026f5   0xf4  Code  Gb  modbus_asc.o [1]
+MBASC_Function          0x080027e9   0xbc  Code  Gb  modbus_asc.o [1]
+MBASC_SendErr           0x080020f1   0x44  Code  Gb  modbus_asc.o [1]
+MBASC_SendMsg           0x080020d3   0x12  Code  Gb  modbus_asc.o [1]
+MBASC_SendMsg_NoLimit   0x080020e5    0xc  Code  Gb  modbus_asc.o [1]
+MODBUS_ASCII_AsciiPacketToRtuPacket
+                        0x080029c5   0x4a  Code  Gb  modbus_ascii.o [1]
+MODBUS_ASCII_AsciiToHex
+                        0x0800291f   0x52  Code  Gb  modbus_ascii.o [1]
+MODBUS_ASCII_CheckAscii
+                        0x08002b13   0x44  Code  Gb  modbus_ascii.o [1]
+MODBUS_ASCII_GetLrc     0x08002971   0x54  Code  Gb  modbus_ascii.o [1]
+MODBUS_ASCII_HandlRevData
+                        0x08002a3f   0xd4  Code  Gb  modbus_ascii.o [1]
+MODBUS_ASCII_HexToAscii
+                        0x080028e1   0x3e  Code  Gb  modbus_ascii.o [1]
+MODBUS_ASCII_RecvData   0x08002b57   0x84  Code  Gb  modbus_ascii.o [1]
+MODBUS_ASCII_RtuPacketToAsciiPacket
+                        0x08002a0f   0x30  Code  Gb  modbus_ascii.o [1]
+MODBUS_ASCII_SendData   0x08002bdb   0x6e  Code  Gb  modbus_ascii.o [1]
+NVIC_SetPriority        0x08003475   0x86  Code  Lc  stm32l0xx_hal_cortex.o [1]
+NVIC_SystemReset        0x080020c1   0x12  Code  Lc  modbus_asc.o [1]
+PLLMulTable             0x08003b4c    0xc  Data  Gb  system_stm32l0xx.o [1]
+ReadPara                0x0800378d  0x108  Code  Gb  para.o [1]
+Region$$Table$$Base     0x08003ac0          --   Gb  - Linker created -
+Region$$Table$$Limit    0x08003ae4          --   Gb  - Linker created -
+SendBuf                 0x20000274   0xc8  Data  Gb  modbus_asc.o [1]
+SendLen                 0x20000514    0x1  Data  Gb  modbus_asc.o [1]
+SysTick_Config          0x080034fb   0x30  Code  Lc  stm32l0xx_hal_cortex.o [1]
+SysTick_Handler         0x08003711    0x8  Code  Gb  main.o [1]
+SystemClock_Config      0x08003551   0x46  Code  Gb  main.o [1]
+SystemCoreClock         0x20000014    0x4  Data  Gb  system_stm32l0xx.o [1]
+SystemInit              0x080039e9   0x58  Code  Gb  system_stm32l0xx.o [1]
+UART1_RXBuff            0x2000033c   0xc8  Data  Gb  usart.o [1]
+UART1_SendData          0x08002f1f   0x5c  Code  Gb  usart.o [1]
+UART1_TXBuff            0x20000404   0xc8  Data  Gb  usart.o [1]
+UartRecvFrameOK         0x20000517    0x1  Data  Gb  usart.o [1]
+Uart_Config_Init        0x08002e5f   0xc0  Code  Gb  usart.o [1]
+Usart_Gpio_Init         0x08002dc9   0x96  Code  Gb  usart.o [1]
+UserPara                0x200004cc   0x1c  Data  Gb  para.o [1]
+User_Default_Param      0x20000000   0x14  Data  Lc  para.o [1]
+User_Iwdg_Feed          0x080035bd    0xa  Code  Gb  main.o [1]
+User_Iwdg_Init          0x08003597   0x26  Code  Gb  main.o [1]
+__aeabi_idiv            0x08002c95         Code  Gb  I32DivModFast.o [5]
+__aeabi_idiv0           0x080030ad         Code  Gb  IntDivZer.o [5]
+__aeabi_idivmod         0x08002c95         Code  Gb  I32DivModFast.o [5]
+__aeabi_ldiv0           0x080031b5         Code  Gb  I64DivZer.o [5]
+__aeabi_lmul            0x08003119         Code  Gb  I64Mul.o [5]
+__aeabi_uidiv           0x08002c9b         Code  Gb  I32DivModFast.o [5]
+__aeabi_uidivmod        0x08002c9b         Code  Gb  I32DivModFast.o [5]
+__aeabi_uldivmod        0x0800314b         Code  Gb  I64DivMod.o [5]
+__cmain                 0x08003ae5         Code  Gb  cmain.o [5]
+__exit                  0x08003b19   0x14  Code  Gb  exit.o [6]
+__iar_copy_init3        0x08003a69   0x30  Code  Gb  copy_init3.o [5]
+__iar_data_init3        0x08003a99   0x28  Code  Gb  data_init.o [5]
+__iar_program_start     0x08003b59         Code  Gb  cstartup_M.o [5]
+__iar_zero_init3        0x080030af   0x2a  Code  Gb  zero_init3.o [5]
+__low_level_init        0x08003aff    0x4  Code  Gb  low_level_init.o [3]
+__vector_table          0x08002000         Data  Gb  startup_stm32l031xx.o [1]
+_call_main              0x08003af1         Code  Gb  cmain.o [5]
+_exit                   0x08003b0d         Code  Gb  cexit.o [5]
+_main                   0x08003afb         Code  Gb  cmain.o [5]
+cyAsciiBuff             0x2000001c  0x258  Data  Gb  modbus_ascii.o [1]
+exit                    0x08003b03    0x8  Code  Gb  exit.o [3]
+g_cyRevBufffLen         0x20000512    0x2  Data  Lc  modbus_ascii.o [1]
+g_cyRevState            0x20000018    0x1  Data  Lc  modbus_ascii.o [1]
+main                    0x080035c7  0x124  Code  Gb  main.o [1]
+u8SendIndex             0x20000516    0x1  Data  Gb  usart.o [1]
+u8SendNum               0x20000515    0x1  Data  Gb  usart.o [1]
+uwTick                  0x2000050c    0x4  Data  Gb  stm32l0xx_hal.o [1]
+
+
+[1] = E:\工作工程\温湿度\L031传感器\L031工时传感器(AD检测)\Project\Debug\Obj
+[2] = command line
+[3] = dl6M_tln.a
+[4] = m6M_tl.a
+[5] = rt6M_tl.a
+[6] = shb_l.a
+
+  6 988 bytes of readonly  code memory
+     92 bytes of readonly  data memory
+  3 349 bytes of readwrite data memory
+
+Errors: none
+Warnings: none

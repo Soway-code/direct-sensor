@@ -166,7 +166,8 @@ uint8_t Time_5s_flag = 0;
 uint8_t Time_1min_flag = 0;
 
 extern uint16_t Current_pulse;  //当前脉冲数
- 
+
+u8 first_20s = 0;   //开机后的前20秒
 
 //回调函数，定时器中断服务函数调用
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
@@ -177,6 +178,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
       if(htim==(&TIM22_Handler))
       {
             tim_cnt++;//
+            //first_20s++;
  
             tim_1min_cnt += 1;   //加一次为1s
 
@@ -184,20 +186,25 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
             TIM21->CNT = 0;      
            
          
-          UserPara.TotalPulse += read_pulse;  //计总脉冲        
-            
+          UserPara.TotalPulse += read_pulse;  //计总脉冲                   
+
+          
           if(read_pulse)
           {            
             PulseFlag = Bit_SET;  //有脉冲   转动中
             Time_1min_flag = 0;
           }
-            
-          Time_1min_flag++;
-          
-          if((Time_1min_flag > 59) && (read_pulse == 0))
+          else
           {
-            PulseFlag = Bit_RESET; //无脉冲  停转
-          }
+             Time_1min_flag++;
+             
+            if(Time_1min_flag > 180)
+            {
+              Time_1min_flag = 0;
+              PulseFlag = Bit_RESET; //无脉冲  停转
+            }
+          }             
+              
           
           if(!((tim_cnt+1)%1))  //1s
           {
@@ -209,8 +216,15 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
               Time_5s_flag = 1;
           }
           
-          if(!((tim_cnt +1)%20))//20s计时
-          {
+          if((tim_cnt < 20) && (first_20s ==0) )
+          { 
+            if(tim_cnt == 19)
+              first_20s = 1;
+            UserPara.RotateSpeed = read_pulse * 3;
+          
+          }                 
+          else if (!((tim_cnt +1)%20))//20s计时
+          {            
               UserPara.RotateSpeed = (UserPara.TotalPulse - Current_pulse) * 3 ;  //计算旋转速度  1s脉冲数*60  HZ/min  单位：转每分
               Current_pulse = UserPara.TotalPulse;              
           }

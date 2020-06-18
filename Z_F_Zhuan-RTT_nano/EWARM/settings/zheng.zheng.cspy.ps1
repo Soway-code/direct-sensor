@@ -23,9 +23,9 @@
 
 if ($debugfile -eq "")
 {
-& "D:\Program Files\IAR\common\bin\cspybat" -f "E:\STM32\STM32MXCUBE\Z_F_Zhuan-RTT_nano\EWARM\settings\zheng.zheng.general.xcl" --backend -f "E:\STM32\STM32MXCUBE\Z_F_Zhuan-RTT_nano\EWARM\settings\zheng.zheng.driver.xcl" 
+& "D:\Program Files\IAR\common\bin\cspybat" -f "D:\github\direct-sensor\direct-sensor\Z_F_Zhuan-RTT_nano\EWARM\settings\zheng.zheng.general.xcl" --backend -f "D:\github\direct-sensor\direct-sensor\Z_F_Zhuan-RTT_nano\EWARM\settings\zheng.zheng.driver.xcl" 
 }
 else
 {
-& "D:\Program Files\IAR\common\bin\cspybat" -f "E:\STM32\STM32MXCUBE\Z_F_Zhuan-RTT_nano\EWARM\settings\zheng.zheng.general.xcl" --debug_file=$debugfile --backend -f "E:\STM32\STM32MXCUBE\Z_F_Zhuan-RTT_nano\EWARM\settings\zheng.zheng.driver.xcl" 
+& "D:\Program Files\IAR\common\bin\cspybat" -f "D:\github\direct-sensor\direct-sensor\Z_F_Zhuan-RTT_nano\EWARM\settings\zheng.zheng.general.xcl" --debug_file=$debugfile --backend -f "D:\github\direct-sensor\direct-sensor\Z_F_Zhuan-RTT_nano\EWARM\settings\zheng.zheng.driver.xcl" 
 }

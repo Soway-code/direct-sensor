@@ -15,6 +15,16 @@ void Delay_Us(uint32_t cnt)
     while (cnt--);
 }
 
+void delay_us(uint32_t us)
+{
+    uint32_t delay = (HAL_RCC_GetHCLKFreq() / 4000000 * us);
+    while(delay--)
+    {
+        ;
+    }
+
+}
+
 
 //**************************************************************************************************
 // Ãû³Æ         : Unshort2Array()
