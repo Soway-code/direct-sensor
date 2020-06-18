@@ -106,7 +106,7 @@ int RNG_Get_RandomRange(int min,int max)
 * @param        None
 * @return       函数执行结果
 */
-int Filter() 
+int Filter(void) 
 {
 	int NewValue;
 	

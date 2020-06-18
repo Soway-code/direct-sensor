@@ -31,6 +31,10 @@ int Filter_Value;
 
 void SystemClock_Config(void);
 
+/**
+* @brief    重定义fputc函数 
+* @retval   串口发送数据
+*/
 int fputc(int ch, FILE *f)
 {
 	HAL_UART_Transmit(&huart1, (uint8_t*)&ch, 1, 1000);
@@ -45,40 +49,20 @@ int fputc(int ch, FILE *f)
   */
 int main(void)
 {
-  /* USER CODE BEGIN 1 */
+	
+  HAL_Init();                //HAL库初始化
 
-  /* USER CODE END 1 */
 
-  /* MCU Configuration--------------------------------------------------------*/
+  SystemClock_Config();      //系统时钟
 
-  /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
-  HAL_Init();
-
-  /* USER CODE BEGIN Init */
-
-  /* USER CODE END Init */
-
-  /* Configure the system clock */
-  SystemClock_Config();
-
-  /* USER CODE BEGIN SysInit */
-
-  /* USER CODE END SysInit */
-
-  /* Initialize all configured peripherals */
-  MX_GPIO_Init();
-  MX_RNG_Init();
-  MX_USART1_UART_Init();
-  /* USER CODE BEGIN 2 */
-
-  /* USER CODE END 2 */
-
-  /* Infinite loop */
-  /* USER CODE BEGIN WHILE */
+  MX_GPIO_Init();            //引脚初始化
+  MX_RNG_Init();             //RNG随机数初始化
+  MX_USART1_UART_Init();     //串口初始化
+	
   while (1)
   {
 	  Filter_Value = Filter();
-	  Value = Filter_Value;
+//	  Value = Filter_Value;
 	  printf("%d\r\n", Filter_Value);
 	  HAL_Delay(100);
     /* USER CODE END WHILE */
