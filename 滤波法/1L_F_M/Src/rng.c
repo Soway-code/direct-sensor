@@ -90,8 +90,9 @@ uint32_t RNG_Get_RandomNum(void)
 	return randomnum;
 }
 
-/**@brief       生成[min,max]范围的随机数
-* @param        None
+/**
+* @brief       生成[min,max]范围的随机数
+* @param        min: 最小值    max: 最大值
 * @return       随机数
 */
 int RNG_Get_RandomRange(int min,int max)

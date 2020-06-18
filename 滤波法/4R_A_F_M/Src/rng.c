@@ -77,8 +77,11 @@ void HAL_RNG_MspDeInit(RNG_HandleTypeDef* rngHandle)
   }
 } 
 
-//得到随机数
-//返回值:获取到的随机数
+/**
+* @brief       得到随机数
+* @param    	None
+* @return       获取到的随机数
+*/
 uint32_t RNG_Get_RandomNum(void)
 {
 	uint32_t randomnum;
@@ -87,7 +90,11 @@ uint32_t RNG_Get_RandomNum(void)
 	return randomnum;
 }
 
-//生成[min,max]范围的随机数
+/**
+* @brief       生成[min,max]范围的随机数
+* @param        min: 最小值    max: 最大值
+* @return       随机数
+*/
 int RNG_Get_RandomRange(int min,int max)
 { 
 	uint32_t randomnum;
@@ -97,8 +104,10 @@ int RNG_Get_RandomRange(int min,int max)
 }
 
 
-// 递推平均滤波法（又称滑动平均滤波法）
-
+/**
+* @brief    递推平均滤波法（又称滑动平均滤波法）
+* @retval   递推后数据的平均值
+*/
 int Filter(void) 
 {
 	int filter_sum = 0;

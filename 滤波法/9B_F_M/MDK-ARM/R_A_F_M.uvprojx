@@ -427,11 +427,6 @@
               <FileType>4</FileType>
               <FilePath>..\Src\rng.lib</FilePath>
             </File>
-            <File>
-              <FileName>rng.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Src\rng.c</FilePath>
-            </File>
           </Files>
         </Group>
         <Group>
