@@ -24,39 +24,17 @@
 #include "usart.h"
 #include "gpio.h"
 
-/* Private includes ----------------------------------------------------------*/
-/* USER CODE BEGIN Includes */
+
 #include "stdio.h"
-/* USER CODE END Includes */
 
-/* Private typedef -----------------------------------------------------------*/
-/* USER CODE BEGIN PTD */
-
-/* USER CODE END PTD */
-
-/* Private define ------------------------------------------------------------*/
-/* USER CODE BEGIN PD */
-/* USER CODE END PD */
-
-/* Private macro -------------------------------------------------------------*/
-/* USER CODE BEGIN PM */
 int Filter_Value;
-/* USER CODE END PM */
 
-/* Private variables ---------------------------------------------------------*/
-
-/* USER CODE BEGIN PV */
-
-/* USER CODE END PV */
-
-/* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
-/* USER CODE BEGIN PFP */
 
-/* USER CODE END PFP */
-
-/* Private user code ---------------------------------------------------------*/
-/* USER CODE BEGIN 0 */
+/**
+* @brief    重定义fputc函数 
+* @retval   串口发送数据
+*/
 int fputc(int ch, FILE *f)
 {
 	HAL_UART_Transmit(&huart1, (uint8_t*)&ch, 1, 1000);
@@ -71,47 +49,25 @@ int fputc(int ch, FILE *f)
   */
 int main(void)
 {
-  /* USER CODE BEGIN 1 */
 
-  /* USER CODE END 1 */
+  HAL_Init();                //HAL库初始化
 
-  /* MCU Configuration--------------------------------------------------------*/
 
-  /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
-  HAL_Init();
+  SystemClock_Config();      //系统时钟
 
-  /* USER CODE BEGIN Init */
+  MX_GPIO_Init();            //引脚初始化
+  MX_RNG_Init();             //RNG随机数初始化
+  MX_USART1_UART_Init();     //串口初始化
 
-  /* USER CODE END Init */
-
-  /* Configure the system clock */
-  SystemClock_Config();
-
-  /* USER CODE BEGIN SysInit */
-
-  /* USER CODE END SysInit */
-
-  /* Initialize all configured peripherals */
-  MX_GPIO_Init();
-  MX_RNG_Init();
-  MX_USART1_UART_Init();
-  /* USER CODE BEGIN 2 */
-
-  /* USER CODE END 2 */
-
-  /* Infinite loop */
-  /* USER CODE BEGIN WHILE */
   while (1)
   {
 	  Filter_Value = Filter();
 
 	  printf("%d\r\n", Filter_Value);
 	  HAL_Delay(100);
-    /* USER CODE END WHILE */
 
-    /* USER CODE BEGIN 3 */
   }
-  /* USER CODE END 3 */
+
 }
 
 /**

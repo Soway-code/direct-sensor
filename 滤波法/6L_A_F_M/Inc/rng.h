@@ -45,9 +45,18 @@ void MX_RNG_Init(void);
 //返回值:获取到的随机数
 uint32_t RNG_Get_RandomNum(void);
 
-//生成[min,max]范围的随机数
+/**
+* @brief       生成[min,max]范围的随机数
+* @param        min: 最小值    max: 最大值
+* @return       随机数
+*/
 int RNG_Get_RandomRange(int min,int max);
 
+/**
+* @brief   限幅平均滤波法
+* @brief   在设定的幅度内，求平均值
+* @retval  限幅平均值
+*/
 int Filter(void);
 
 /* USER CODE BEGIN Prototypes */

@@ -403,11 +403,6 @@
               <FilePath>../Src/gpio.c</FilePath>
             </File>
             <File>
-              <FileName>rng.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>../Src/rng.c</FilePath>
-            </File>
-            <File>
               <FileName>usart.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Src/usart.c</FilePath>
@@ -421,6 +416,16 @@
               <FileName>stm32h7xx_hal_msp.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Src/stm32h7xx_hal_msp.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>rng</GroupName>
+          <Files>
+            <File>
+              <FileName>rng.lib</FileName>
+              <FileType>4</FileType>
+              <FilePath>..\Src\rng.lib</FilePath>
             </File>
           </Files>
         </Group>
