@@ -21,4 +21,4 @@ direct sensor + F3(protocol)
    3：代码经过CI审核之后假如有错误（有可能服务器的设置更新），项目审核人要再次人工审核之后允许合并
 
 
-2020-6-16 upgrade  about cricle time match to the machine run/stop status hold time ; Now the seting-time is 3 min 
+NOTE：2020-6-16 upgrade  about cricle time match to the machine run/stop status hold time ; Now the seting-time is 3 min 
