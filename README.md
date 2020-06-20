@@ -3,8 +3,6 @@ direct sensor + F3(protocol)
 
    正反转+F3协议 
 
-https://www.code-inspector.com/project/9930/score/svg
-https://www.code-inspector.com/project/9930/status/svg
 
 <a href="https://frontend.code-inspector.com/projects/soway-code-direct-sensor">
   <img alt="Code inspector Code Quality Score "
