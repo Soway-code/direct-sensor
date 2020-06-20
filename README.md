@@ -6,9 +6,14 @@ direct sensor + F3(protocol)
 https://www.code-inspector.com/project/9930/score/svg
 https://www.code-inspector.com/project/9930/status/svg
 
-<a href="https://scan.coverity.com/projects/soway-code-direct-sensor">
+<a href="https://frontend.code-inspector.com/projects/soway-code-direct-sensor">
   <img alt="Code inspector Code Quality Score "
        src="https://www.code-inspector.com/project/9930/score/svg"/>
+</a>
+
+<a href="https://frontend.code-inspector.com/projects/soway-code-direct-sensor">
+  <img alt="Code inspector Code Quality Score "
+       src="https://www.code-inspector.com/project/9930/status/svg"/>
 </a>
 
 
