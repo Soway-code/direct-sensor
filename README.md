@@ -6,6 +6,8 @@ direct sensor + F3(protocol)
 https://www.code-inspector.com/project/9930/score/svg
 https://www.code-inspector.com/project/9930/status/svg
 
+https://frontend.code-inspector.com/public/project/9930/direct-sensor/dashboard
+
 [![Build Status](https://travis-ci.com/loodao/helloworld.svg?branch=master)](https://travis-ci.com/loodao/helloworld)
 
 <a href="https://scan.coverity.com/projects/soway-code-direct-sensor">
