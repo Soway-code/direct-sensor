@@ -1,4 +1,4 @@
-#                         Filtering method  
+#                           Filter  method  
 
 ####                                                                  -----代码维护人：韦剑祥
 
